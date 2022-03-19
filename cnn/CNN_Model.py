@@ -85,9 +85,9 @@ class CNNNetwork(nn.Module):
         #senventh 13 * 13 * 128
         self.conv7 = nn.Conv2d(128, 128, 3)
         self.conv8 = nn.Conv2d(128, 128, 3)
-        #nineth 9 * 9 * 143
+        #nineth 9 * 9 * 128
         #do maxpolling(2,2)
-        #tenth 5 * 5 * 143
+        #tenth 5 * 5 * 128
         self.fc1 = nn.Linear(5*5*128, 700)
         self.fc2 = nn.Linear(700, 4)
         self.dropout = nn.Dropout(0.5)

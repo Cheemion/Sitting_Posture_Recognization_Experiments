@@ -1,0 +1,3421 @@
+GoogLeNet(
+  (conv1): BasicConv2d(
+    (conv): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (maxpool1): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (conv2): BasicConv2d(
+    (conv): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (conv3): BasicConv2d(
+    (conv): Conv2d(64, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (maxpool2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (inception3a): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(192, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(192, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(16, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (inception3b): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(128, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(256, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (maxpool3): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (inception4a): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(480, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(480, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(96, 208, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(208, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(480, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(16, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(16, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(480, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (inception4b): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(512, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(112, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(112, 224, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(24, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(24, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (inception4c): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(24, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(24, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (inception4d): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(512, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(112, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(144, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(144, 288, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(288, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(512, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (inception4e): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(528, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(528, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(160, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(528, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(528, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (maxpool4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=True)
+  (inception5a): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(832, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(160, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (inception5b): Inception(
+    (branch1): BasicConv2d(
+      (conv): Conv2d(832, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch2): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(192, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch3): Sequential(
+      (0): BasicConv2d(
+        (conv): Conv2d(832, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicConv2d(
+        (conv): Conv2d(48, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (branch4): Sequential(
+      (0): MaxPool2d(kernel_size=3, stride=1, padding=1, dilation=1, ceil_mode=True)
+      (1): BasicConv2d(
+        (conv): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (aux1): None
+  (aux2): None
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=1024, out_features=4, bias=True)
+)
+Epoch 1
+-------------------------------
+loss: 1.398452  [    0/   25]
+loss: 0.891634  [    1/   25]
+loss: 0.723704  [    2/   25]
+loss: 0.686177  [    3/   25]
+loss: 0.422570  [    4/   25]
+loss: 0.410321  [    5/   25]
+loss: 0.613571  [    6/   25]
+loss: 0.265979  [    7/   25]
+loss: 0.334371  [    8/   25]
+loss: 0.477791  [    9/   25]
+loss: 0.405379  [   10/   25]
+loss: 0.351878  [   11/   25]
+loss: 0.245828  [   12/   25]
+loss: 0.241502  [   13/   25]
+loss: 0.269251  [   14/   25]
+loss: 0.273660  [   15/   25]
+loss: 0.354491  [   16/   25]
+loss: 0.487132  [   17/   25]
+loss: 0.386514  [   18/   25]
+loss: 0.276201  [   19/   25]
+loss: 0.323240  [   20/   25]
+loss: 0.225317  [   21/   25]
+loss: 0.283026  [   22/   25]
+loss: 0.168428  [   23/   25]
+loss: 0.251703  [   24/   25]
+average one epoch loss: 0.430725
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.255432 
+
+Epoch 2
+-------------------------------
+loss: 0.097977  [    0/   25]
+loss: 0.177015  [    1/   25]
+loss: 0.215814  [    2/   25]
+loss: 0.183421  [    3/   25]
+loss: 0.172147  [    4/   25]
+loss: 0.131534  [    5/   25]
+loss: 0.114496  [    6/   25]
+loss: 0.094716  [    7/   25]
+loss: 0.094694  [    8/   25]
+loss: 0.056992  [    9/   25]
+loss: 0.115971  [   10/   25]
+loss: 0.111616  [   11/   25]
+loss: 0.101208  [   12/   25]
+loss: 0.055900  [   13/   25]
+loss: 0.063094  [   14/   25]
+loss: 0.059564  [   15/   25]
+loss: 0.343816  [   16/   25]
+loss: 0.233402  [   17/   25]
+loss: 0.292564  [   18/   25]
+loss: 0.227053  [   19/   25]
+loss: 0.189559  [   20/   25]
+loss: 1.015434  [   21/   25]
+loss: 0.166869  [   22/   25]
+loss: 0.163085  [   23/   25]
+loss: 0.296554  [   24/   25]
+average one epoch loss: 0.190980
+Test Error: 
+Accuracy: 74.5%, Avg loss: 0.614507 
+
+Epoch 3
+-------------------------------
+loss: 0.239561  [    0/   25]
+loss: 0.313750  [    1/   25]
+loss: 0.123983  [    2/   25]
+loss: 0.191522  [    3/   25]
+loss: 0.045179  [    4/   25]
+loss: 0.116362  [    5/   25]
+loss: 0.149294  [    6/   25]
+loss: 0.076120  [    7/   25]
+loss: 0.307387  [    8/   25]
+loss: 0.085037  [    9/   25]
+loss: 0.104351  [   10/   25]
+loss: 0.038421  [   11/   25]
+loss: 0.077578  [   12/   25]
+loss: 0.129664  [   13/   25]
+loss: 0.141433  [   14/   25]
+loss: 0.113679  [   15/   25]
+loss: 0.152483  [   16/   25]
+loss: 0.050659  [   17/   25]
+loss: 0.059097  [   18/   25]
+loss: 0.036423  [   19/   25]
+loss: 0.047837  [   20/   25]
+loss: 0.149088  [   21/   25]
+loss: 0.026988  [   22/   25]
+loss: 0.146148  [   23/   25]
+loss: 0.038588  [   24/   25]
+average one epoch loss: 0.118425
+Test Error: 
+Accuracy: 87.5%, Avg loss: 0.446319 
+
+Epoch 4
+-------------------------------
+loss: 0.079467  [    0/   25]
+loss: 0.118180  [    1/   25]
+loss: 0.169256  [    2/   25]
+loss: 0.223459  [    3/   25]
+loss: 0.106774  [    4/   25]
+loss: 0.040127  [    5/   25]
+loss: 0.013956  [    6/   25]
+loss: 0.152617  [    7/   25]
+loss: 0.065673  [    8/   25]
+loss: 0.094353  [    9/   25]
+loss: 0.098356  [   10/   25]
+loss: 0.077121  [   11/   25]
+loss: 0.034572  [   12/   25]
+loss: 0.078538  [   13/   25]
+loss: 0.061774  [   14/   25]
+loss: 0.052971  [   15/   25]
+loss: 0.055190  [   16/   25]
+loss: 0.056294  [   17/   25]
+loss: 0.030996  [   18/   25]
+loss: 0.021528  [   19/   25]
+loss: 0.024020  [   20/   25]
+loss: 0.128539  [   21/   25]
+loss: 0.089747  [   22/   25]
+loss: 0.010891  [   23/   25]
+loss: 0.096360  [   24/   25]
+average one epoch loss: 0.079230
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.378727 
+
+Epoch 5
+-------------------------------
+loss: 0.013686  [    0/   25]
+loss: 0.014436  [    1/   25]
+loss: 0.023467  [    2/   25]
+loss: 0.042129  [    3/   25]
+loss: 0.028126  [    4/   25]
+loss: 0.063735  [    5/   25]
+loss: 0.030435  [    6/   25]
+loss: 0.017862  [    7/   25]
+loss: 0.015169  [    8/   25]
+loss: 0.067524  [    9/   25]
+loss: 0.004371  [   10/   25]
+loss: 0.013668  [   11/   25]
+loss: 0.010754  [   12/   25]
+loss: 0.103873  [   13/   25]
+loss: 0.063184  [   14/   25]
+loss: 0.061272  [   15/   25]
+loss: 0.015417  [   16/   25]
+loss: 0.165056  [   17/   25]
+loss: 0.087987  [   18/   25]
+loss: 0.037341  [   19/   25]
+loss: 0.025289  [   20/   25]
+loss: 0.027868  [   21/   25]
+loss: 0.102259  [   22/   25]
+loss: 0.020007  [   23/   25]
+loss: 0.037352  [   24/   25]
+average one epoch loss: 0.043691
+Test Error: 
+Accuracy: 86.5%, Avg loss: 0.404459 
+
+Epoch 6
+-------------------------------
+loss: 0.007383  [    0/   25]
+loss: 0.004323  [    1/   25]
+loss: 0.012060  [    2/   25]
+loss: 0.002865  [    3/   25]
+loss: 0.003640  [    4/   25]
+loss: 0.015725  [    5/   25]
+loss: 0.010119  [    6/   25]
+loss: 0.009623  [    7/   25]
+loss: 0.011398  [    8/   25]
+loss: 0.010767  [    9/   25]
+loss: 0.018305  [   10/   25]
+loss: 0.101160  [   11/   25]
+loss: 0.002007  [   12/   25]
+loss: 0.003149  [   13/   25]
+loss: 0.034378  [   14/   25]
+loss: 0.053856  [   15/   25]
+loss: 0.005919  [   16/   25]
+loss: 0.022332  [   17/   25]
+loss: 0.003783  [   18/   25]
+loss: 0.114052  [   19/   25]
+loss: 0.024061  [   20/   25]
+loss: 0.007117  [   21/   25]
+loss: 0.003059  [   22/   25]
+loss: 0.012460  [   23/   25]
+loss: 0.017925  [   24/   25]
+average one epoch loss: 0.020459
+Test Error: 
+Accuracy: 89.0%, Avg loss: 0.357644 
+
+Epoch 7
+-------------------------------
+loss: 0.017174  [    0/   25]
+loss: 0.066721  [    1/   25]
+loss: 0.008190  [    2/   25]
+loss: 0.055696  [    3/   25]
+loss: 0.004801  [    4/   25]
+loss: 0.069038  [    5/   25]
+loss: 0.002892  [    6/   25]
+loss: 0.029025  [    7/   25]
+loss: 0.002822  [    8/   25]
+loss: 0.027537  [    9/   25]
+loss: 0.029469  [   10/   25]
+loss: 0.004542  [   11/   25]
+loss: 0.181875  [   12/   25]
+loss: 0.040383  [   13/   25]
+loss: 0.011056  [   14/   25]
+loss: 0.102449  [   15/   25]
+loss: 0.057401  [   16/   25]
+loss: 0.034437  [   17/   25]
+loss: 0.237404  [   18/   25]
+loss: 0.043917  [   19/   25]
+loss: 0.023541  [   20/   25]
+loss: 0.144477  [   21/   25]
+loss: 0.008819  [   22/   25]
+loss: 0.073479  [   23/   25]
+loss: 0.051585  [   24/   25]
+average one epoch loss: 0.053149
+Test Error: 
+Accuracy: 83.0%, Avg loss: 0.957487 
+
+Epoch 8
+-------------------------------
+loss: 0.079826  [    0/   25]
+loss: 0.049739  [    1/   25]
+loss: 0.156000  [    2/   25]
+loss: 0.032475  [    3/   25]
+loss: 0.116918  [    4/   25]
+loss: 0.044453  [    5/   25]
+loss: 0.146907  [    6/   25]
+loss: 0.079321  [    7/   25]
+loss: 0.058754  [    8/   25]
+loss: 0.108168  [    9/   25]
+loss: 0.066661  [   10/   25]
+loss: 0.148413  [   11/   25]
+loss: 0.064318  [   12/   25]
+loss: 0.056521  [   13/   25]
+loss: 0.091403  [   14/   25]
+loss: 0.136396  [   15/   25]
+loss: 0.079032  [   16/   25]
+loss: 0.073518  [   17/   25]
+loss: 0.081742  [   18/   25]
+loss: 0.263066  [   19/   25]
+loss: 0.034361  [   20/   25]
+loss: 0.298218  [   21/   25]
+loss: 0.310756  [   22/   25]
+loss: 0.117186  [   23/   25]
+loss: 0.077018  [   24/   25]
+average one epoch loss: 0.110847
+Test Error: 
+Accuracy: 84.0%, Avg loss: 0.558546 
+
+Epoch 9
+-------------------------------
+loss: 0.131421  [    0/   25]
+loss: 0.024795  [    1/   25]
+loss: 0.068711  [    2/   25]
+loss: 0.038788  [    3/   25]
+loss: 0.200390  [    4/   25]
+loss: 0.159359  [    5/   25]
+loss: 0.296331  [    6/   25]
+loss: 0.043175  [    7/   25]
+loss: 0.039271  [    8/   25]
+loss: 0.050207  [    9/   25]
+loss: 0.041572  [   10/   25]
+loss: 0.107277  [   11/   25]
+loss: 0.023682  [   12/   25]
+loss: 0.018617  [   13/   25]
+loss: 0.401204  [   14/   25]
+loss: 0.225056  [   15/   25]
+loss: 0.089661  [   16/   25]
+loss: 0.084702  [   17/   25]
+loss: 0.180508  [   18/   25]
+loss: 0.030864  [   19/   25]
+loss: 0.019393  [   20/   25]
+loss: 0.057307  [   21/   25]
+loss: 0.184507  [   22/   25]
+loss: 0.212951  [   23/   25]
+loss: 0.059885  [   24/   25]
+average one epoch loss: 0.111585
+Test Error: 
+Accuracy: 87.0%, Avg loss: 0.298421 
+
+Epoch 10
+-------------------------------
+loss: 0.023100  [    0/   25]
+loss: 0.008292  [    1/   25]
+loss: 0.015689  [    2/   25]
+loss: 0.070686  [    3/   25]
+loss: 0.009265  [    4/   25]
+loss: 0.013151  [    5/   25]
+loss: 0.045762  [    6/   25]
+loss: 0.012513  [    7/   25]
+loss: 0.255262  [    8/   25]
+loss: 0.018318  [    9/   25]
+loss: 0.010590  [   10/   25]
+loss: 0.072974  [   11/   25]
+loss: 0.104243  [   12/   25]
+loss: 0.026519  [   13/   25]
+loss: 0.032348  [   14/   25]
+loss: 0.148233  [   15/   25]
+loss: 0.006724  [   16/   25]
+loss: 0.026635  [   17/   25]
+loss: 0.033346  [   18/   25]
+loss: 0.010602  [   19/   25]
+loss: 0.049233  [   20/   25]
+loss: 0.036372  [   21/   25]
+loss: 0.106391  [   22/   25]
+loss: 0.068386  [   23/   25]
+loss: 0.017598  [   24/   25]
+average one epoch loss: 0.048889
+Test Error: 
+Accuracy: 89.5%, Avg loss: 0.315535 
+
+Epoch 11
+-------------------------------
+loss: 0.018596  [    0/   25]
+loss: 0.006559  [    1/   25]
+loss: 0.025172  [    2/   25]
+loss: 0.007722  [    3/   25]
+loss: 0.008507  [    4/   25]
+loss: 0.008112  [    5/   25]
+loss: 0.026862  [    6/   25]
+loss: 0.025708  [    7/   25]
+loss: 0.034596  [    8/   25]
+loss: 0.009743  [    9/   25]
+loss: 0.016549  [   10/   25]
+loss: 0.125300  [   11/   25]
+loss: 0.071508  [   12/   25]
+loss: 0.095790  [   13/   25]
+loss: 0.002689  [   14/   25]
+loss: 0.010507  [   15/   25]
+loss: 0.010471  [   16/   25]
+loss: 0.013719  [   17/   25]
+loss: 0.007689  [   18/   25]
+loss: 0.017203  [   19/   25]
+loss: 0.007321  [   20/   25]
+loss: 0.003882  [   21/   25]
+loss: 0.004919  [   22/   25]
+loss: 0.010177  [   23/   25]
+loss: 0.026437  [   24/   25]
+average one epoch loss: 0.023830
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.334294 
+
+Epoch 12
+-------------------------------
+loss: 0.040486  [    0/   25]
+loss: 0.002304  [    1/   25]
+loss: 0.007400  [    2/   25]
+loss: 0.003690  [    3/   25]
+loss: 0.000847  [    4/   25]
+loss: 0.005312  [    5/   25]
+loss: 0.001779  [    6/   25]
+loss: 0.000552  [    7/   25]
+loss: 0.003117  [    8/   25]
+loss: 0.000947  [    9/   25]
+loss: 0.003263  [   10/   25]
+loss: 0.000548  [   11/   25]
+loss: 0.001611  [   12/   25]
+loss: 0.003428  [   13/   25]
+loss: 0.000920  [   14/   25]
+loss: 0.000716  [   15/   25]
+loss: 0.008242  [   16/   25]
+loss: 0.002029  [   17/   25]
+loss: 0.001182  [   18/   25]
+loss: 0.001034  [   19/   25]
+loss: 0.001450  [   20/   25]
+loss: 0.000613  [   21/   25]
+loss: 0.000427  [   22/   25]
+loss: 0.042015  [   23/   25]
+loss: 0.006055  [   24/   25]
+average one epoch loss: 0.005599
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.395615 
+
+Epoch 13
+-------------------------------
+loss: 0.000398  [    0/   25]
+loss: 0.000678  [    1/   25]
+loss: 0.000967  [    2/   25]
+loss: 0.001620  [    3/   25]
+loss: 0.001881  [    4/   25]
+loss: 0.001882  [    5/   25]
+loss: 0.001565  [    6/   25]
+loss: 0.019658  [    7/   25]
+loss: 0.001581  [    8/   25]
+loss: 0.004480  [    9/   25]
+loss: 0.000876  [   10/   25]
+loss: 0.051354  [   11/   25]
+loss: 0.030393  [   12/   25]
+loss: 0.010191  [   13/   25]
+loss: 0.001670  [   14/   25]
+loss: 0.001636  [   15/   25]
+loss: 0.000455  [   16/   25]
+loss: 0.000368  [   17/   25]
+loss: 0.005755  [   18/   25]
+loss: 0.004730  [   19/   25]
+loss: 0.017416  [   20/   25]
+loss: 0.001351  [   21/   25]
+loss: 0.002344  [   22/   25]
+loss: 0.006036  [   23/   25]
+loss: 0.017636  [   24/   25]
+average one epoch loss: 0.007477
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.419929 
+
+Epoch 14
+-------------------------------
+loss: 0.000885  [    0/   25]
+loss: 0.001186  [    1/   25]
+loss: 0.040285  [    2/   25]
+loss: 0.004011  [    3/   25]
+loss: 0.008706  [    4/   25]
+loss: 0.008385  [    5/   25]
+loss: 0.011373  [    6/   25]
+loss: 0.002562  [    7/   25]
+loss: 0.006568  [    8/   25]
+loss: 0.001661  [    9/   25]
+loss: 0.015440  [   10/   25]
+loss: 0.003175  [   11/   25]
+loss: 0.001145  [   12/   25]
+loss: 0.001027  [   13/   25]
+loss: 0.004734  [   14/   25]
+loss: 0.009085  [   15/   25]
+loss: 0.009868  [   16/   25]
+loss: 0.003091  [   17/   25]
+loss: 0.021720  [   18/   25]
+loss: 0.011438  [   19/   25]
+loss: 0.006011  [   20/   25]
+loss: 0.005469  [   21/   25]
+loss: 0.004876  [   22/   25]
+loss: 0.123848  [   23/   25]
+loss: 0.001689  [   24/   25]
+average one epoch loss: 0.012330
+Test Error: 
+Accuracy: 90.0%, Avg loss: 0.406237 
+
+Epoch 15
+-------------------------------
+loss: 0.005144  [    0/   25]
+loss: 0.093322  [    1/   25]
+loss: 0.003930  [    2/   25]
+loss: 0.019385  [    3/   25]
+loss: 0.001009  [    4/   25]
+loss: 0.000490  [    5/   25]
+loss: 0.200274  [    6/   25]
+loss: 0.238575  [    7/   25]
+loss: 0.019908  [    8/   25]
+loss: 0.001763  [    9/   25]
+loss: 0.001739  [   10/   25]
+loss: 0.001298  [   11/   25]
+loss: 0.002063  [   12/   25]
+loss: 0.003334  [   13/   25]
+loss: 0.207877  [   14/   25]
+loss: 0.019200  [   15/   25]
+loss: 0.024324  [   16/   25]
+loss: 0.010601  [   17/   25]
+loss: 0.090637  [   18/   25]
+loss: 0.062824  [   19/   25]
+loss: 0.105449  [   20/   25]
+loss: 0.206832  [   21/   25]
+loss: 0.140119  [   22/   25]
+loss: 0.008920  [   23/   25]
+loss: 0.021214  [   24/   25]
+average one epoch loss: 0.059609
+Test Error: 
+Accuracy: 85.0%, Avg loss: 0.843824 
+
+Epoch 16
+-------------------------------
+loss: 0.016871  [    0/   25]
+loss: 0.013385  [    1/   25]
+loss: 0.235631  [    2/   25]
+loss: 0.029210  [    3/   25]
+loss: 0.102257  [    4/   25]
+loss: 0.075987  [    5/   25]
+loss: 0.115829  [    6/   25]
+loss: 0.037038  [    7/   25]
+loss: 0.021148  [    8/   25]
+loss: 0.006204  [    9/   25]
+loss: 0.043835  [   10/   25]
+loss: 0.084364  [   11/   25]
+loss: 0.053437  [   12/   25]
+loss: 0.200913  [   13/   25]
+loss: 0.032456  [   14/   25]
+loss: 0.015371  [   15/   25]
+loss: 0.016325  [   16/   25]
+loss: 0.072308  [   17/   25]
+loss: 0.026589  [   18/   25]
+loss: 0.128741  [   19/   25]
+loss: 0.039626  [   20/   25]
+loss: 0.029332  [   21/   25]
+loss: 0.017372  [   22/   25]
+loss: 0.006094  [   23/   25]
+loss: 0.035700  [   24/   25]
+average one epoch loss: 0.058241
+Test Error: 
+Accuracy: 89.0%, Avg loss: 0.429146 
+
+Epoch 17
+-------------------------------
+loss: 0.066244  [    0/   25]
+loss: 0.025218  [    1/   25]
+loss: 0.015312  [    2/   25]
+loss: 0.022007  [    3/   25]
+loss: 0.102289  [    4/   25]
+loss: 0.004241  [    5/   25]
+loss: 0.027161  [    6/   25]
+loss: 0.014002  [    7/   25]
+loss: 0.021668  [    8/   25]
+loss: 0.009423  [    9/   25]
+loss: 0.051659  [   10/   25]
+loss: 0.004742  [   11/   25]
+loss: 0.017332  [   12/   25]
+loss: 0.026871  [   13/   25]
+loss: 0.003329  [   14/   25]
+loss: 0.001364  [   15/   25]
+loss: 0.003661  [   16/   25]
+loss: 0.031698  [   17/   25]
+loss: 0.004044  [   18/   25]
+loss: 0.036929  [   19/   25]
+loss: 0.007481  [   20/   25]
+loss: 0.025460  [   21/   25]
+loss: 0.002755  [   22/   25]
+loss: 0.012485  [   23/   25]
+loss: 0.033372  [   24/   25]
+average one epoch loss: 0.022830
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.514545 
+
+Epoch 18
+-------------------------------
+loss: 0.001458  [    0/   25]
+loss: 0.005599  [    1/   25]
+loss: 0.001081  [    2/   25]
+loss: 0.001206  [    3/   25]
+loss: 0.001613  [    4/   25]
+loss: 0.026147  [    5/   25]
+loss: 0.007999  [    6/   25]
+loss: 0.008663  [    7/   25]
+loss: 0.046071  [    8/   25]
+loss: 0.007131  [    9/   25]
+loss: 0.006186  [   10/   25]
+loss: 0.001519  [   11/   25]
+loss: 0.076696  [   12/   25]
+loss: 0.005826  [   13/   25]
+loss: 0.003501  [   14/   25]
+loss: 0.062393  [   15/   25]
+loss: 0.014979  [   16/   25]
+loss: 0.023870  [   17/   25]
+loss: 0.000922  [   18/   25]
+loss: 0.166851  [   19/   25]
+loss: 0.003500  [   20/   25]
+loss: 0.008233  [   21/   25]
+loss: 0.040953  [   22/   25]
+loss: 0.006400  [   23/   25]
+loss: 0.138501  [   24/   25]
+average one epoch loss: 0.026692
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.616779 
+
+Epoch 19
+-------------------------------
+loss: 0.022193  [    0/   25]
+loss: 0.014702  [    1/   25]
+loss: 0.002842  [    2/   25]
+loss: 0.007394  [    3/   25]
+loss: 0.011017  [    4/   25]
+loss: 0.268584  [    5/   25]
+loss: 0.120448  [    6/   25]
+loss: 0.025177  [    7/   25]
+loss: 0.037010  [    8/   25]
+loss: 0.048797  [    9/   25]
+loss: 0.101367  [   10/   25]
+loss: 0.019685  [   11/   25]
+loss: 0.023114  [   12/   25]
+loss: 0.007897  [   13/   25]
+loss: 0.136509  [   14/   25]
+loss: 0.014678  [   15/   25]
+loss: 0.005945  [   16/   25]
+loss: 0.098358  [   17/   25]
+loss: 0.058938  [   18/   25]
+loss: 0.044341  [   19/   25]
+loss: 0.368327  [   20/   25]
+loss: 0.130827  [   21/   25]
+loss: 0.161658  [   22/   25]
+loss: 0.009374  [   23/   25]
+loss: 0.003370  [   24/   25]
+average one epoch loss: 0.069702
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.343482 
+
+Epoch 20
+-------------------------------
+loss: 0.049808  [    0/   25]
+loss: 0.066541  [    1/   25]
+loss: 0.007242  [    2/   25]
+loss: 0.095950  [    3/   25]
+loss: 0.040888  [    4/   25]
+loss: 0.010588  [    5/   25]
+loss: 0.006287  [    6/   25]
+loss: 0.011111  [    7/   25]
+loss: 0.008338  [    8/   25]
+loss: 0.012028  [    9/   25]
+loss: 0.005574  [   10/   25]
+loss: 0.028440  [   11/   25]
+loss: 0.089318  [   12/   25]
+loss: 0.177903  [   13/   25]
+loss: 0.001380  [   14/   25]
+loss: 0.004635  [   15/   25]
+loss: 0.029682  [   16/   25]
+loss: 0.018643  [   17/   25]
+loss: 0.009201  [   18/   25]
+loss: 0.015184  [   19/   25]
+loss: 0.021084  [   20/   25]
+loss: 0.169583  [   21/   25]
+loss: 0.020506  [   22/   25]
+loss: 0.048787  [   23/   25]
+loss: 0.214025  [   24/   25]
+average one epoch loss: 0.046509
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.328362 
+
+Epoch 21
+-------------------------------
+loss: 0.007902  [    0/   25]
+loss: 0.002698  [    1/   25]
+loss: 0.007053  [    2/   25]
+loss: 0.006088  [    3/   25]
+loss: 0.001287  [    4/   25]
+loss: 0.049205  [    5/   25]
+loss: 0.277403  [    6/   25]
+loss: 0.014044  [    7/   25]
+loss: 0.076518  [    8/   25]
+loss: 0.019270  [    9/   25]
+loss: 0.017254  [   10/   25]
+loss: 0.012926  [   11/   25]
+loss: 0.042209  [   12/   25]
+loss: 0.012488  [   13/   25]
+loss: 0.032340  [   14/   25]
+loss: 0.015698  [   15/   25]
+loss: 0.009954  [   16/   25]
+loss: 0.052782  [   17/   25]
+loss: 0.050647  [   18/   25]
+loss: 0.015857  [   19/   25]
+loss: 0.059603  [   20/   25]
+loss: 0.006115  [   21/   25]
+loss: 0.023227  [   22/   25]
+loss: 0.003989  [   23/   25]
+loss: 0.002953  [   24/   25]
+average one epoch loss: 0.032780
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.470967 
+
+Epoch 22
+-------------------------------
+loss: 0.007056  [    0/   25]
+loss: 0.004456  [    1/   25]
+loss: 0.011970  [    2/   25]
+loss: 0.001296  [    3/   25]
+loss: 0.001477  [    4/   25]
+loss: 0.061315  [    5/   25]
+loss: 0.001603  [    6/   25]
+loss: 0.004595  [    7/   25]
+loss: 0.055686  [    8/   25]
+loss: 0.019422  [    9/   25]
+loss: 0.001732  [   10/   25]
+loss: 0.001815  [   11/   25]
+loss: 0.003627  [   12/   25]
+loss: 0.019492  [   13/   25]
+loss: 0.006826  [   14/   25]
+loss: 0.022593  [   15/   25]
+loss: 0.000478  [   16/   25]
+loss: 0.017867  [   17/   25]
+loss: 0.002953  [   18/   25]
+loss: 0.001186  [   19/   25]
+loss: 0.042020  [   20/   25]
+loss: 0.020066  [   21/   25]
+loss: 0.000638  [   22/   25]
+loss: 0.007965  [   23/   25]
+loss: 0.020067  [   24/   25]
+average one epoch loss: 0.013528
+Test Error: 
+Accuracy: 87.5%, Avg loss: 0.523867 
+
+Epoch 23
+-------------------------------
+loss: 0.007600  [    0/   25]
+loss: 0.003961  [    1/   25]
+loss: 0.025938  [    2/   25]
+loss: 0.002055  [    3/   25]
+loss: 0.006120  [    4/   25]
+loss: 0.038454  [    5/   25]
+loss: 0.004680  [    6/   25]
+loss: 0.003570  [    7/   25]
+loss: 0.005973  [    8/   25]
+loss: 0.122800  [    9/   25]
+loss: 0.004761  [   10/   25]
+loss: 0.012178  [   11/   25]
+loss: 0.002644  [   12/   25]
+loss: 0.005232  [   13/   25]
+loss: 0.002991  [   14/   25]
+loss: 0.000559  [   15/   25]
+loss: 0.136357  [   16/   25]
+loss: 0.007723  [   17/   25]
+loss: 0.000765  [   18/   25]
+loss: 0.001787  [   19/   25]
+loss: 0.032638  [   20/   25]
+loss: 0.107604  [   21/   25]
+loss: 0.040606  [   22/   25]
+loss: 0.082284  [   23/   25]
+loss: 0.022880  [   24/   25]
+average one epoch loss: 0.027286
+Test Error: 
+Accuracy: 87.0%, Avg loss: 0.444066 
+
+Epoch 24
+-------------------------------
+loss: 0.007939  [    0/   25]
+loss: 0.045622  [    1/   25]
+loss: 0.012277  [    2/   25]
+loss: 0.003769  [    3/   25]
+loss: 0.003278  [    4/   25]
+loss: 0.008494  [    5/   25]
+loss: 0.030083  [    6/   25]
+loss: 0.001259  [    7/   25]
+loss: 0.004053  [    8/   25]
+loss: 0.003323  [    9/   25]
+loss: 0.005815  [   10/   25]
+loss: 0.027747  [   11/   25]
+loss: 0.002485  [   12/   25]
+loss: 0.041970  [   13/   25]
+loss: 0.023418  [   14/   25]
+loss: 0.067472  [   15/   25]
+loss: 0.032220  [   16/   25]
+loss: 0.056464  [   17/   25]
+loss: 0.041014  [   18/   25]
+loss: 0.019720  [   19/   25]
+loss: 0.022258  [   20/   25]
+loss: 0.022674  [   21/   25]
+loss: 0.015439  [   22/   25]
+loss: 0.069790  [   23/   25]
+loss: 0.016773  [   24/   25]
+average one epoch loss: 0.023414
+Test Error: 
+Accuracy: 88.5%, Avg loss: 0.581456 
+
+Epoch 25
+-------------------------------
+loss: 0.081759  [    0/   25]
+loss: 0.005606  [    1/   25]
+loss: 0.026760  [    2/   25]
+loss: 0.000421  [    3/   25]
+loss: 0.042474  [    4/   25]
+loss: 0.001797  [    5/   25]
+loss: 0.051486  [    6/   25]
+loss: 0.002178  [    7/   25]
+loss: 0.026993  [    8/   25]
+loss: 0.020213  [    9/   25]
+loss: 0.096721  [   10/   25]
+loss: 0.012085  [   11/   25]
+loss: 0.004177  [   12/   25]
+loss: 0.092413  [   13/   25]
+loss: 0.008098  [   14/   25]
+loss: 0.119372  [   15/   25]
+loss: 0.001636  [   16/   25]
+loss: 0.046673  [   17/   25]
+loss: 0.006581  [   18/   25]
+loss: 0.170766  [   19/   25]
+loss: 0.002215  [   20/   25]
+loss: 0.021903  [   21/   25]
+loss: 0.068857  [   22/   25]
+loss: 0.047075  [   23/   25]
+loss: 0.013251  [   24/   25]
+average one epoch loss: 0.038861
+Test Error: 
+Accuracy: 86.0%, Avg loss: 0.626262 
+
+Epoch 26
+-------------------------------
+loss: 0.127791  [    0/   25]
+loss: 0.058973  [    1/   25]
+loss: 0.011911  [    2/   25]
+loss: 0.160802  [    3/   25]
+loss: 0.005707  [    4/   25]
+loss: 0.010949  [    5/   25]
+loss: 0.002438  [    6/   25]
+loss: 0.004350  [    7/   25]
+loss: 0.010012  [    8/   25]
+loss: 0.067824  [    9/   25]
+loss: 0.142071  [   10/   25]
+loss: 0.002806  [   11/   25]
+loss: 0.053880  [   12/   25]
+loss: 0.018858  [   13/   25]
+loss: 0.005192  [   14/   25]
+loss: 0.099468  [   15/   25]
+loss: 0.025073  [   16/   25]
+loss: 0.006489  [   17/   25]
+loss: 0.012556  [   18/   25]
+loss: 0.012515  [   19/   25]
+loss: 0.023939  [   20/   25]
+loss: 0.009454  [   21/   25]
+loss: 0.027108  [   22/   25]
+loss: 0.020130  [   23/   25]
+loss: 0.125206  [   24/   25]
+average one epoch loss: 0.041820
+Test Error: 
+Accuracy: 84.0%, Avg loss: 0.647353 
+
+Epoch 27
+-------------------------------
+loss: 0.009527  [    0/   25]
+loss: 0.001002  [    1/   25]
+loss: 0.027321  [    2/   25]
+loss: 0.005853  [    3/   25]
+loss: 0.128991  [    4/   25]
+loss: 0.001801  [    5/   25]
+loss: 0.007219  [    6/   25]
+loss: 0.000729  [    7/   25]
+loss: 0.018572  [    8/   25]
+loss: 0.022637  [    9/   25]
+loss: 0.112226  [   10/   25]
+loss: 0.000779  [   11/   25]
+loss: 0.010332  [   12/   25]
+loss: 0.005782  [   13/   25]
+loss: 0.009483  [   14/   25]
+loss: 0.018709  [   15/   25]
+loss: 0.024892  [   16/   25]
+loss: 0.036436  [   17/   25]
+loss: 0.002442  [   18/   25]
+loss: 0.002617  [   19/   25]
+loss: 0.002239  [   20/   25]
+loss: 0.002621  [   21/   25]
+loss: 0.007450  [   22/   25]
+loss: 0.003388  [   23/   25]
+loss: 0.016250  [   24/   25]
+average one epoch loss: 0.019172
+Test Error: 
+Accuracy: 87.0%, Avg loss: 0.675999 
+
+Epoch 28
+-------------------------------
+loss: 0.000882  [    0/   25]
+loss: 0.001167  [    1/   25]
+loss: 0.002697  [    2/   25]
+loss: 0.013262  [    3/   25]
+loss: 0.001307  [    4/   25]
+loss: 0.001777  [    5/   25]
+loss: 0.000387  [    6/   25]
+loss: 0.004129  [    7/   25]
+loss: 0.015467  [    8/   25]
+loss: 0.004802  [    9/   25]
+loss: 0.104036  [   10/   25]
+loss: 0.004130  [   11/   25]
+loss: 0.002482  [   12/   25]
+loss: 0.031159  [   13/   25]
+loss: 0.002889  [   14/   25]
+loss: 0.033024  [   15/   25]
+loss: 0.000181  [   16/   25]
+loss: 0.005318  [   17/   25]
+loss: 0.002166  [   18/   25]
+loss: 0.000987  [   19/   25]
+loss: 0.001039  [   20/   25]
+loss: 0.009315  [   21/   25]
+loss: 0.000296  [   22/   25]
+loss: 0.002161  [   23/   25]
+loss: 0.001077  [   24/   25]
+average one epoch loss: 0.009846
+Test Error: 
+Accuracy: 87.0%, Avg loss: 0.482169 
+
+Epoch 29
+-------------------------------
+loss: 0.001282  [    0/   25]
+loss: 0.003481  [    1/   25]
+loss: 0.064363  [    2/   25]
+loss: 0.002028  [    3/   25]
+loss: 0.000214  [    4/   25]
+loss: 0.001662  [    5/   25]
+loss: 0.008555  [    6/   25]
+loss: 0.001510  [    7/   25]
+loss: 0.001569  [    8/   25]
+loss: 0.002585  [    9/   25]
+loss: 0.247642  [   10/   25]
+loss: 0.000221  [   11/   25]
+loss: 0.000587  [   12/   25]
+loss: 0.002747  [   13/   25]
+loss: 0.000475  [   14/   25]
+loss: 0.000738  [   15/   25]
+loss: 0.009029  [   16/   25]
+loss: 0.002895  [   17/   25]
+loss: 0.000678  [   18/   25]
+loss: 0.001630  [   19/   25]
+loss: 0.210699  [   20/   25]
+loss: 0.009447  [   21/   25]
+loss: 0.066123  [   22/   25]
+loss: 0.001479  [   23/   25]
+loss: 0.000304  [   24/   25]
+average one epoch loss: 0.025678
+Test Error: 
+Accuracy: 83.5%, Avg loss: 1.087413 
+
+Epoch 30
+-------------------------------
+loss: 0.054578  [    0/   25]
+loss: 0.000377  [    1/   25]
+loss: 0.005542  [    2/   25]
+loss: 0.193198  [    3/   25]
+loss: 0.005168  [    4/   25]
+loss: 0.041343  [    5/   25]
+loss: 0.004618  [    6/   25]
+loss: 0.164273  [    7/   25]
+loss: 0.008023  [    8/   25]
+loss: 0.004023  [    9/   25]
+loss: 0.001302  [   10/   25]
+loss: 0.016125  [   11/   25]
+loss: 0.001624  [   12/   25]
+loss: 0.055447  [   13/   25]
+loss: 0.115299  [   14/   25]
+loss: 0.057513  [   15/   25]
+loss: 0.001168  [   16/   25]
+loss: 0.009285  [   17/   25]
+loss: 0.039107  [   18/   25]
+loss: 0.068282  [   19/   25]
+loss: 0.019452  [   20/   25]
+loss: 0.130357  [   21/   25]
+loss: 0.046614  [   22/   25]
+loss: 0.009631  [   23/   25]
+loss: 0.062168  [   24/   25]
+average one epoch loss: 0.044581
+Test Error: 
+Accuracy: 85.0%, Avg loss: 0.712952 
+
+Epoch 31
+-------------------------------
+loss: 0.159764  [    0/   25]
+loss: 0.013449  [    1/   25]
+loss: 0.045191  [    2/   25]
+loss: 0.010588  [    3/   25]
+loss: 0.002121  [    4/   25]
+loss: 0.110096  [    5/   25]
+loss: 0.242560  [    6/   25]
+loss: 0.007975  [    7/   25]
+loss: 0.014111  [    8/   25]
+loss: 0.111179  [    9/   25]
+loss: 0.062817  [   10/   25]
+loss: 0.017051  [   11/   25]
+loss: 0.021993  [   12/   25]
+loss: 0.222461  [   13/   25]
+loss: 0.055965  [   14/   25]
+loss: 0.225910  [   15/   25]
+loss: 0.294795  [   16/   25]
+loss: 0.011332  [   17/   25]
+loss: 0.016945  [   18/   25]
+loss: 0.074324  [   19/   25]
+loss: 0.003048  [   20/   25]
+loss: 0.040380  [   21/   25]
+loss: 0.047616  [   22/   25]
+loss: 0.077193  [   23/   25]
+loss: 0.035012  [   24/   25]
+average one epoch loss: 0.076955
+Test Error: 
+Accuracy: 83.0%, Avg loss: 0.801985 
+
+Epoch 32
+-------------------------------
+loss: 0.003321  [    0/   25]
+loss: 0.021808  [    1/   25]
+loss: 0.003055  [    2/   25]
+loss: 0.037184  [    3/   25]
+loss: 0.023999  [    4/   25]
+loss: 0.012139  [    5/   25]
+loss: 0.147314  [    6/   25]
+loss: 0.098633  [    7/   25]
+loss: 0.071162  [    8/   25]
+loss: 0.007408  [    9/   25]
+loss: 0.002422  [   10/   25]
+loss: 0.026271  [   11/   25]
+loss: 0.185307  [   12/   25]
+loss: 0.024418  [   13/   25]
+loss: 0.009713  [   14/   25]
+loss: 0.001965  [   15/   25]
+loss: 0.004064  [   16/   25]
+loss: 0.011529  [   17/   25]
+loss: 0.049480  [   18/   25]
+loss: 0.098651  [   19/   25]
+loss: 0.243849  [   20/   25]
+loss: 0.087977  [   21/   25]
+loss: 0.028476  [   22/   25]
+loss: 0.000879  [   23/   25]
+loss: 0.016911  [   24/   25]
+average one epoch loss: 0.048717
+Test Error: 
+Accuracy: 87.0%, Avg loss: 0.567398 
+
+Epoch 33
+-------------------------------
+loss: 0.007454  [    0/   25]
+loss: 0.002597  [    1/   25]
+loss: 0.001878  [    2/   25]
+loss: 0.003564  [    3/   25]
+loss: 0.012393  [    4/   25]
+loss: 0.314795  [    5/   25]
+loss: 0.026883  [    6/   25]
+loss: 0.037607  [    7/   25]
+loss: 0.031797  [    8/   25]
+loss: 0.070350  [    9/   25]
+loss: 0.004727  [   10/   25]
+loss: 0.012730  [   11/   25]
+loss: 0.018472  [   12/   25]
+loss: 0.002214  [   13/   25]
+loss: 0.070851  [   14/   25]
+loss: 0.005290  [   15/   25]
+loss: 0.007566  [   16/   25]
+loss: 0.047177  [   17/   25]
+loss: 0.020548  [   18/   25]
+loss: 0.046521  [   19/   25]
+loss: 0.011844  [   20/   25]
+loss: 0.008317  [   21/   25]
+loss: 0.016361  [   22/   25]
+loss: 0.029896  [   23/   25]
+loss: 0.008501  [   24/   25]
+average one epoch loss: 0.032813
+Test Error: 
+Accuracy: 88.5%, Avg loss: 0.595079 
+
+Epoch 34
+-------------------------------
+loss: 0.002263  [    0/   25]
+loss: 0.024461  [    1/   25]
+loss: 0.003699  [    2/   25]
+loss: 0.000964  [    3/   25]
+loss: 0.002434  [    4/   25]
+loss: 0.128382  [    5/   25]
+loss: 0.004549  [    6/   25]
+loss: 0.057780  [    7/   25]
+loss: 0.001983  [    8/   25]
+loss: 0.013348  [    9/   25]
+loss: 0.000878  [   10/   25]
+loss: 0.009273  [   11/   25]
+loss: 0.010117  [   12/   25]
+loss: 0.001441  [   13/   25]
+loss: 0.002729  [   14/   25]
+loss: 0.021822  [   15/   25]
+loss: 0.062493  [   16/   25]
+loss: 0.175043  [   17/   25]
+loss: 0.056831  [   18/   25]
+loss: 0.026402  [   19/   25]
+loss: 0.000866  [   20/   25]
+loss: 0.001257  [   21/   25]
+loss: 0.001016  [   22/   25]
+loss: 0.006398  [   23/   25]
+loss: 0.009224  [   24/   25]
+average one epoch loss: 0.025026
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.574790 
+
+Epoch 35
+-------------------------------
+loss: 0.001405  [    0/   25]
+loss: 0.057924  [    1/   25]
+loss: 0.001222  [    2/   25]
+loss: 0.001298  [    3/   25]
+loss: 0.010839  [    4/   25]
+loss: 0.010902  [    5/   25]
+loss: 0.004836  [    6/   25]
+loss: 0.027895  [    7/   25]
+loss: 0.011993  [    8/   25]
+loss: 0.003511  [    9/   25]
+loss: 0.000774  [   10/   25]
+loss: 0.014695  [   11/   25]
+loss: 0.000335  [   12/   25]
+loss: 0.000660  [   13/   25]
+loss: 0.002050  [   14/   25]
+loss: 0.025889  [   15/   25]
+loss: 0.003120  [   16/   25]
+loss: 0.002270  [   17/   25]
+loss: 0.006295  [   18/   25]
+loss: 0.084695  [   19/   25]
+loss: 0.135205  [   20/   25]
+loss: 0.001312  [   21/   25]
+loss: 0.023870  [   22/   25]
+loss: 0.001435  [   23/   25]
+loss: 0.001600  [   24/   25]
+average one epoch loss: 0.017441
+Test Error: 
+Accuracy: 89.5%, Avg loss: 0.586415 
+
+Epoch 36
+-------------------------------
+loss: 0.000528  [    0/   25]
+loss: 0.000805  [    1/   25]
+loss: 0.000426  [    2/   25]
+loss: 0.000230  [    3/   25]
+loss: 0.005239  [    4/   25]
+loss: 0.000967  [    5/   25]
+loss: 0.005176  [    6/   25]
+loss: 0.041749  [    7/   25]
+loss: 0.383434  [    8/   25]
+loss: 0.004231  [    9/   25]
+loss: 0.000504  [   10/   25]
+loss: 0.006949  [   11/   25]
+loss: 0.000601  [   12/   25]
+loss: 0.006026  [   13/   25]
+loss: 0.001032  [   14/   25]
+loss: 0.002055  [   15/   25]
+loss: 0.014740  [   16/   25]
+loss: 0.049027  [   17/   25]
+loss: 0.014587  [   18/   25]
+loss: 0.006147  [   19/   25]
+loss: 0.001485  [   20/   25]
+loss: 0.011396  [   21/   25]
+loss: 0.013270  [   22/   25]
+loss: 0.020068  [   23/   25]
+loss: 0.001329  [   24/   25]
+average one epoch loss: 0.023680
+Test Error: 
+Accuracy: 87.5%, Avg loss: 0.415694 
+
+Epoch 37
+-------------------------------
+loss: 0.000577  [    0/   25]
+loss: 0.010160  [    1/   25]
+loss: 0.016001  [    2/   25]
+loss: 0.001604  [    3/   25]
+loss: 0.004287  [    4/   25]
+loss: 0.007135  [    5/   25]
+loss: 0.007318  [    6/   25]
+loss: 0.004163  [    7/   25]
+loss: 0.001461  [    8/   25]
+loss: 0.002161  [    9/   25]
+loss: 0.005626  [   10/   25]
+loss: 0.000748  [   11/   25]
+loss: 0.000542  [   12/   25]
+loss: 0.000550  [   13/   25]
+loss: 0.001621  [   14/   25]
+loss: 0.004164  [   15/   25]
+loss: 0.007180  [   16/   25]
+loss: 0.011936  [   17/   25]
+loss: 0.000108  [   18/   25]
+loss: 0.001175  [   19/   25]
+loss: 0.000351  [   20/   25]
+loss: 0.001182  [   21/   25]
+loss: 0.000475  [   22/   25]
+loss: 0.000047  [   23/   25]
+loss: 0.009223  [   24/   25]
+average one epoch loss: 0.003992
+Test Error: 
+Accuracy: 88.5%, Avg loss: 0.525369 
+
+Epoch 38
+-------------------------------
+loss: 0.000125  [    0/   25]
+loss: 0.000230  [    1/   25]
+loss: 0.003894  [    2/   25]
+loss: 0.000216  [    3/   25]
+loss: 0.001722  [    4/   25]
+loss: 0.001739  [    5/   25]
+loss: 0.000109  [    6/   25]
+loss: 0.005000  [    7/   25]
+loss: 0.000171  [    8/   25]
+loss: 0.000400  [    9/   25]
+loss: 0.000922  [   10/   25]
+loss: 0.001848  [   11/   25]
+loss: 0.000532  [   12/   25]
+loss: 0.000018  [   13/   25]
+loss: 0.000820  [   14/   25]
+loss: 0.000163  [   15/   25]
+loss: 0.000071  [   16/   25]
+loss: 0.000173  [   17/   25]
+loss: 0.000717  [   18/   25]
+loss: 0.000047  [   19/   25]
+loss: 0.000290  [   20/   25]
+loss: 0.001061  [   21/   25]
+loss: 0.000034  [   22/   25]
+loss: 0.000068  [   23/   25]
+loss: 0.000089  [   24/   25]
+average one epoch loss: 0.000818
+Test Error: 
+Accuracy: 89.0%, Avg loss: 0.531339 
+
+Epoch 39
+-------------------------------
+loss: 0.000628  [    0/   25]
+loss: 0.001746  [    1/   25]
+loss: 0.001436  [    2/   25]
+loss: 0.000142  [    3/   25]
+loss: 0.000314  [    4/   25]
+loss: 0.001777  [    5/   25]
+loss: 0.000101  [    6/   25]
+loss: 0.000086  [    7/   25]
+loss: 0.000130  [    8/   25]
+loss: 0.000181  [    9/   25]
+loss: 0.000055  [   10/   25]
+loss: 0.000286  [   11/   25]
+loss: 0.000045  [   12/   25]
+loss: 0.000124  [   13/   25]
+loss: 0.000057  [   14/   25]
+loss: 0.000047  [   15/   25]
+loss: 0.000033  [   16/   25]
+loss: 0.000177  [   17/   25]
+loss: 0.000035  [   18/   25]
+loss: 0.000042  [   19/   25]
+loss: 0.001010  [   20/   25]
+loss: 0.000136  [   21/   25]
+loss: 0.000152  [   22/   25]
+loss: 0.000160  [   23/   25]
+loss: 0.000149  [   24/   25]
+average one epoch loss: 0.000362
+Test Error: 
+Accuracy: 90.0%, Avg loss: 0.516312 
+
+Epoch 40
+-------------------------------
+loss: 0.002363  [    0/   25]
+loss: 0.000065  [    1/   25]
+loss: 0.000045  [    2/   25]
+loss: 0.000060  [    3/   25]
+loss: 0.000118  [    4/   25]
+loss: 0.000100  [    5/   25]
+loss: 0.000054  [    6/   25]
+loss: 0.000402  [    7/   25]
+loss: 0.000167  [    8/   25]
+loss: 0.000123  [    9/   25]
+loss: 0.000093  [   10/   25]
+loss: 0.000034  [   11/   25]
+loss: 0.000449  [   12/   25]
+loss: 0.000248  [   13/   25]
+loss: 0.000126  [   14/   25]
+loss: 0.000137  [   15/   25]
+loss: 0.000012  [   16/   25]
+loss: 0.000081  [   17/   25]
+loss: 0.000136  [   18/   25]
+loss: 0.000037  [   19/   25]
+loss: 0.000036  [   20/   25]
+loss: 0.000040  [   21/   25]
+loss: 0.000033  [   22/   25]
+loss: 0.000056  [   23/   25]
+loss: 0.000130  [   24/   25]
+average one epoch loss: 0.000206
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.524871 
+
+Epoch 41
+-------------------------------
+loss: 0.001072  [    0/   25]
+loss: 0.000169  [    1/   25]
+loss: 0.159681  [    2/   25]
+loss: 0.000032  [    3/   25]
+loss: 0.001695  [    4/   25]
+loss: 0.000778  [    5/   25]
+loss: 0.000095  [    6/   25]
+loss: 0.000560  [    7/   25]
+loss: 0.001295  [    8/   25]
+loss: 0.000257  [    9/   25]
+loss: 0.005068  [   10/   25]
+loss: 0.049747  [   11/   25]
+loss: 0.021229  [   12/   25]
+loss: 0.010955  [   13/   25]
+loss: 0.010984  [   14/   25]
+loss: 0.005009  [   15/   25]
+loss: 0.020923  [   16/   25]
+loss: 0.003285  [   17/   25]
+loss: 0.028957  [   18/   25]
+loss: 0.065101  [   19/   25]
+loss: 0.064065  [   20/   25]
+loss: 0.002859  [   21/   25]
+loss: 0.000599  [   22/   25]
+loss: 0.001253  [   23/   25]
+loss: 0.135511  [   24/   25]
+average one epoch loss: 0.023647
+Test Error: 
+Accuracy: 89.5%, Avg loss: 0.773461 
+
+Epoch 42
+-------------------------------
+loss: 0.055660  [    0/   25]
+loss: 0.018506  [    1/   25]
+loss: 0.001568  [    2/   25]
+loss: 0.001439  [    3/   25]
+loss: 0.012282  [    4/   25]
+loss: 0.001647  [    5/   25]
+loss: 0.350244  [    6/   25]
+loss: 0.001176  [    7/   25]
+loss: 0.075515  [    8/   25]
+loss: 0.042967  [    9/   25]
+loss: 0.018471  [   10/   25]
+loss: 0.013030  [   11/   25]
+loss: 0.173982  [   12/   25]
+loss: 0.006891  [   13/   25]
+loss: 0.010066  [   14/   25]
+loss: 0.050413  [   15/   25]
+loss: 0.001561  [   16/   25]
+loss: 0.025986  [   17/   25]
+loss: 0.135913  [   18/   25]
+loss: 0.057605  [   19/   25]
+loss: 0.057325  [   20/   25]
+loss: 0.022683  [   21/   25]
+loss: 0.129627  [   22/   25]
+loss: 0.001423  [   23/   25]
+loss: 0.006364  [   24/   25]
+average one epoch loss: 0.050894
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.462724 
+
+Epoch 43
+-------------------------------
+loss: 0.002313  [    0/   25]
+loss: 0.012855  [    1/   25]
+loss: 0.000765  [    2/   25]
+loss: 0.004196  [    3/   25]
+loss: 0.001155  [    4/   25]
+loss: 0.013319  [    5/   25]
+loss: 0.021507  [    6/   25]
+loss: 0.004583  [    7/   25]
+loss: 0.025360  [    8/   25]
+loss: 0.052003  [    9/   25]
+loss: 0.053897  [   10/   25]
+loss: 0.006326  [   11/   25]
+loss: 0.227174  [   12/   25]
+loss: 0.001911  [   13/   25]
+loss: 0.010894  [   14/   25]
+loss: 0.039916  [   15/   25]
+loss: 0.065548  [   16/   25]
+loss: 0.012520  [   17/   25]
+loss: 0.074750  [   18/   25]
+loss: 0.037039  [   19/   25]
+loss: 0.003912  [   20/   25]
+loss: 0.007269  [   21/   25]
+loss: 0.151340  [   22/   25]
+loss: 0.023334  [   23/   25]
+loss: 0.091862  [   24/   25]
+average one epoch loss: 0.037830
+Test Error: 
+Accuracy: 85.5%, Avg loss: 0.741828 
+
+Epoch 44
+-------------------------------
+loss: 0.025315  [    0/   25]
+loss: 0.017874  [    1/   25]
+loss: 0.023894  [    2/   25]
+loss: 0.007020  [    3/   25]
+loss: 0.005680  [    4/   25]
+loss: 0.001091  [    5/   25]
+loss: 0.049419  [    6/   25]
+loss: 0.070809  [    7/   25]
+loss: 0.003310  [    8/   25]
+loss: 0.021322  [    9/   25]
+loss: 0.003106  [   10/   25]
+loss: 0.002982  [   11/   25]
+loss: 0.002026  [   12/   25]
+loss: 0.039560  [   13/   25]
+loss: 0.120493  [   14/   25]
+loss: 0.075046  [   15/   25]
+loss: 0.022131  [   16/   25]
+loss: 0.024376  [   17/   25]
+loss: 0.007767  [   18/   25]
+loss: 0.002792  [   19/   25]
+loss: 0.136406  [   20/   25]
+loss: 0.000579  [   21/   25]
+loss: 0.066065  [   22/   25]
+loss: 0.013252  [   23/   25]
+loss: 0.045814  [   24/   25]
+average one epoch loss: 0.031525
+Test Error: 
+Accuracy: 88.0%, Avg loss: 0.406012 
+
+Epoch 45
+-------------------------------
+loss: 0.006527  [    0/   25]
+loss: 0.022415  [    1/   25]
+loss: 0.011659  [    2/   25]
+loss: 0.005392  [    3/   25]
+loss: 0.047646  [    4/   25]
+loss: 0.033522  [    5/   25]
+loss: 0.016078  [    6/   25]
+loss: 0.004053  [    7/   25]
+loss: 0.002495  [    8/   25]
+loss: 0.001122  [    9/   25]
+loss: 0.038215  [   10/   25]
+loss: 0.012021  [   11/   25]
+loss: 0.033863  [   12/   25]
+loss: 0.011060  [   13/   25]
+loss: 0.010560  [   14/   25]
+loss: 0.031089  [   15/   25]
+loss: 0.124920  [   16/   25]
+loss: 0.159763  [   17/   25]
+loss: 0.006249  [   18/   25]
+loss: 0.028620  [   19/   25]
+loss: 0.015375  [   20/   25]
+loss: 0.004487  [   21/   25]
+loss: 0.008864  [   22/   25]
+loss: 0.001975  [   23/   25]
+loss: 0.044161  [   24/   25]
+average one epoch loss: 0.027285
+Test Error: 
+Accuracy: 89.0%, Avg loss: 0.862483 
+
+Epoch 46
+-------------------------------
+loss: 0.001675  [    0/   25]
+loss: 0.005101  [    1/   25]
+loss: 0.001754  [    2/   25]
+loss: 0.066983  [    3/   25]
+loss: 0.003289  [    4/   25]
+loss: 0.015143  [    5/   25]
+loss: 0.002786  [    6/   25]
+loss: 0.006447  [    7/   25]
+loss: 0.004842  [    8/   25]
+loss: 0.003530  [    9/   25]
+loss: 0.005379  [   10/   25]
+loss: 0.075094  [   11/   25]
+loss: 0.005155  [   12/   25]
+loss: 0.001025  [   13/   25]
+loss: 0.000832  [   14/   25]
+loss: 0.161785  [   15/   25]
+loss: 0.002404  [   16/   25]
+loss: 0.010652  [   17/   25]
+loss: 0.003628  [   18/   25]
+loss: 0.018746  [   19/   25]
+loss: 0.003056  [   20/   25]
+loss: 0.002834  [   21/   25]
+loss: 0.001980  [   22/   25]
+loss: 0.022529  [   23/   25]
+loss: 0.018143  [   24/   25]
+average one epoch loss: 0.017792
+Test Error: 
+Accuracy: 87.5%, Avg loss: 0.748049 
+
+Epoch 47
+-------------------------------
+loss: 0.000330  [    0/   25]
+loss: 0.001359  [    1/   25]
+loss: 0.003323  [    2/   25]
+loss: 0.000703  [    3/   25]
+loss: 0.016150  [    4/   25]
+loss: 0.003929  [    5/   25]
+loss: 0.000419  [    6/   25]
+loss: 0.001113  [    7/   25]
+loss: 0.111352  [    8/   25]
+loss: 0.011965  [    9/   25]
+loss: 0.000853  [   10/   25]
+loss: 0.064130  [   11/   25]
+loss: 0.145606  [   12/   25]
+loss: 0.010006  [   13/   25]
+loss: 0.012611  [   14/   25]
+loss: 0.038122  [   15/   25]
+loss: 0.001325  [   16/   25]
+loss: 0.001903  [   17/   25]
+loss: 0.012453  [   18/   25]
+loss: 0.005944  [   19/   25]
+loss: 0.118069  [   20/   25]
+loss: 0.001554  [   21/   25]
+loss: 0.072066  [   22/   25]
+loss: 0.019298  [   23/   25]
+loss: 0.058122  [   24/   25]
+average one epoch loss: 0.028508
+Test Error: 
+Accuracy: 83.0%, Avg loss: 1.049888 
+
+Epoch 48
+-------------------------------
+loss: 0.155935  [    0/   25]
+loss: 0.000806  [    1/   25]
+loss: 0.011158  [    2/   25]
+loss: 0.062534  [    3/   25]
+loss: 0.011840  [    4/   25]
+loss: 0.020623  [    5/   25]
+loss: 0.050866  [    6/   25]
+loss: 0.050633  [    7/   25]
+loss: 0.016703  [    8/   25]
+loss: 0.011293  [    9/   25]
+loss: 0.021973  [   10/   25]
+loss: 0.002127  [   11/   25]
+loss: 0.027868  [   12/   25]
+loss: 0.005924  [   13/   25]
+loss: 0.002322  [   14/   25]
+loss: 0.017820  [   15/   25]
+loss: 0.033206  [   16/   25]
+loss: 0.024605  [   17/   25]
+loss: 0.101937  [   18/   25]
+loss: 0.020734  [   19/   25]
+loss: 0.006820  [   20/   25]
+loss: 0.003429  [   21/   25]
+loss: 0.000758  [   22/   25]
+loss: 0.001504  [   23/   25]
+loss: 0.006136  [   24/   25]
+average one epoch loss: 0.026782
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.372736 
+
+Epoch 49
+-------------------------------
+loss: 0.001833  [    0/   25]
+loss: 0.005464  [    1/   25]
+loss: 0.001553  [    2/   25]
+loss: 0.000316  [    3/   25]
+loss: 0.000583  [    4/   25]
+loss: 0.001066  [    5/   25]
+loss: 0.070662  [    6/   25]
+loss: 0.009870  [    7/   25]
+loss: 0.002967  [    8/   25]
+loss: 0.026925  [    9/   25]
+loss: 0.002477  [   10/   25]
+loss: 0.000160  [   11/   25]
+loss: 0.000413  [   12/   25]
+loss: 0.011541  [   13/   25]
+loss: 0.002289  [   14/   25]
+loss: 0.000689  [   15/   25]
+loss: 0.001154  [   16/   25]
+loss: 0.014430  [   17/   25]
+loss: 0.004132  [   18/   25]
+loss: 0.001049  [   19/   25]
+loss: 0.008193  [   20/   25]
+loss: 0.002565  [   21/   25]
+loss: 0.011550  [   22/   25]
+loss: 0.002450  [   23/   25]
+loss: 0.002364  [   24/   25]
+average one epoch loss: 0.007468
+Test Error: 
+Accuracy: 90.0%, Avg loss: 0.586482 
+
+Epoch 50
+-------------------------------
+loss: 0.000124  [    0/   25]
+loss: 0.012126  [    1/   25]
+loss: 0.058825  [    2/   25]
+loss: 0.000723  [    3/   25]
+loss: 0.005659  [    4/   25]
+loss: 0.000143  [    5/   25]
+loss: 0.000194  [    6/   25]
+loss: 0.001585  [    7/   25]
+loss: 0.002109  [    8/   25]
+loss: 0.000436  [    9/   25]
+loss: 0.001761  [   10/   25]
+loss: 0.000094  [   11/   25]
+loss: 0.002189  [   12/   25]
+loss: 0.007976  [   13/   25]
+loss: 0.005505  [   14/   25]
+loss: 0.001181  [   15/   25]
+loss: 0.000673  [   16/   25]
+loss: 0.001271  [   17/   25]
+loss: 0.023582  [   18/   25]
+loss: 0.001695  [   19/   25]
+loss: 0.000905  [   20/   25]
+loss: 0.000584  [   21/   25]
+loss: 0.000818  [   22/   25]
+loss: 0.003932  [   23/   25]
+loss: 0.000504  [   24/   25]
+average one epoch loss: 0.005384
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.454250 
+
+Epoch 51
+-------------------------------
+loss: 0.000191  [    0/   25]
+loss: 0.007885  [    1/   25]
+loss: 0.002198  [    2/   25]
+loss: 0.000438  [    3/   25]
+loss: 0.003628  [    4/   25]
+loss: 0.000223  [    5/   25]
+loss: 0.000330  [    6/   25]
+loss: 0.000070  [    7/   25]
+loss: 0.000450  [    8/   25]
+loss: 0.000122  [    9/   25]
+loss: 0.000275  [   10/   25]
+loss: 0.000502  [   11/   25]
+loss: 0.001653  [   12/   25]
+loss: 0.007228  [   13/   25]
+loss: 0.000988  [   14/   25]
+loss: 0.000250  [   15/   25]
+loss: 0.000270  [   16/   25]
+loss: 0.000285  [   17/   25]
+loss: 0.000590  [   18/   25]
+loss: 0.000188  [   19/   25]
+loss: 0.000613  [   20/   25]
+loss: 0.000031  [   21/   25]
+loss: 0.000455  [   22/   25]
+loss: 0.000526  [   23/   25]
+loss: 0.000151  [   24/   25]
+average one epoch loss: 0.001182
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.516607 
+
+Epoch 52
+-------------------------------
+loss: 0.000375  [    0/   25]
+loss: 0.000078  [    1/   25]
+loss: 0.000479  [    2/   25]
+loss: 0.000123  [    3/   25]
+loss: 0.000270  [    4/   25]
+loss: 0.000529  [    5/   25]
+loss: 0.000193  [    6/   25]
+loss: 0.000478  [    7/   25]
+loss: 0.000135  [    8/   25]
+loss: 0.009267  [    9/   25]
+loss: 0.000701  [   10/   25]
+loss: 0.000921  [   11/   25]
+loss: 0.001056  [   12/   25]
+loss: 0.000225  [   13/   25]
+loss: 0.000311  [   14/   25]
+loss: 0.000071  [   15/   25]
+loss: 0.000467  [   16/   25]
+loss: 0.000349  [   17/   25]
+loss: 0.000149  [   18/   25]
+loss: 0.000044  [   19/   25]
+loss: 0.000216  [   20/   25]
+loss: 0.008877  [   21/   25]
+loss: 0.000968  [   22/   25]
+loss: 0.000208  [   23/   25]
+loss: 0.000183  [   24/   25]
+average one epoch loss: 0.001067
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.515405 
+
+Epoch 53
+-------------------------------
+loss: 0.000785  [    0/   25]
+loss: 0.000485  [    1/   25]
+loss: 0.011297  [    2/   25]
+loss: 0.000140  [    3/   25]
+loss: 0.000178  [    4/   25]
+loss: 0.000161  [    5/   25]
+loss: 0.001337  [    6/   25]
+loss: 0.000026  [    7/   25]
+loss: 0.000045  [    8/   25]
+loss: 0.000163  [    9/   25]
+loss: 0.000144  [   10/   25]
+loss: 0.000104  [   11/   25]
+loss: 0.000377  [   12/   25]
+loss: 0.000572  [   13/   25]
+loss: 0.000070  [   14/   25]
+loss: 0.000226  [   15/   25]
+loss: 0.000131  [   16/   25]
+loss: 0.000386  [   17/   25]
+loss: 0.000434  [   18/   25]
+loss: 0.000122  [   19/   25]
+loss: 0.000191  [   20/   25]
+loss: 0.000013  [   21/   25]
+loss: 0.000205  [   22/   25]
+loss: 0.000177  [   23/   25]
+loss: 0.002528  [   24/   25]
+average one epoch loss: 0.000812
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.541216 
+
+Epoch 54
+-------------------------------
+loss: 0.000852  [    0/   25]
+loss: 0.000047  [    1/   25]
+loss: 0.000102  [    2/   25]
+loss: 0.000043  [    3/   25]
+loss: 0.000089  [    4/   25]
+loss: 0.000026  [    5/   25]
+loss: 0.001080  [    6/   25]
+loss: 0.000108  [    7/   25]
+loss: 0.000222  [    8/   25]
+loss: 0.000031  [    9/   25]
+loss: 0.000062  [   10/   25]
+loss: 0.000048  [   11/   25]
+loss: 0.000047  [   12/   25]
+loss: 0.000213  [   13/   25]
+loss: 0.000059  [   14/   25]
+loss: 0.002258  [   15/   25]
+loss: 0.000049  [   16/   25]
+loss: 0.000022  [   17/   25]
+loss: 0.000012  [   18/   25]
+loss: 0.000014  [   19/   25]
+loss: 0.000382  [   20/   25]
+loss: 0.000300  [   21/   25]
+loss: 0.000019  [   22/   25]
+loss: 0.001069  [   23/   25]
+loss: 0.001279  [   24/   25]
+average one epoch loss: 0.000337
+Test Error: 
+Accuracy: 90.0%, Avg loss: 0.524069 
+
+Epoch 55
+-------------------------------
+loss: 0.000043  [    0/   25]
+loss: 0.000053  [    1/   25]
+loss: 0.000109  [    2/   25]
+loss: 0.000023  [    3/   25]
+loss: 0.000050  [    4/   25]
+loss: 0.000218  [    5/   25]
+loss: 0.000042  [    6/   25]
+loss: 0.000030  [    7/   25]
+loss: 0.000096  [    8/   25]
+loss: 0.000031  [    9/   25]
+loss: 0.000073  [   10/   25]
+loss: 0.000084  [   11/   25]
+loss: 0.000068  [   12/   25]
+loss: 0.000091  [   13/   25]
+loss: 0.000058  [   14/   25]
+loss: 0.000075  [   15/   25]
+loss: 0.002750  [   16/   25]
+loss: 0.000020  [   17/   25]
+loss: 0.000102  [   18/   25]
+loss: 0.000032  [   19/   25]
+loss: 0.000055  [   20/   25]
+loss: 0.000292  [   21/   25]
+loss: 0.000020  [   22/   25]
+loss: 0.000053  [   23/   25]
+loss: 0.000133  [   24/   25]
+average one epoch loss: 0.000184
+Test Error: 
+Accuracy: 92.0%, Avg loss: 0.520452 
+
+Epoch 56
+-------------------------------
+loss: 0.000200  [    0/   25]
+loss: 0.000112  [    1/   25]
+loss: 0.000327  [    2/   25]
+loss: 0.000083  [    3/   25]
+loss: 0.000148  [    4/   25]
+loss: 0.000048  [    5/   25]
+loss: 0.000019  [    6/   25]
+loss: 0.000065  [    7/   25]
+loss: 0.000016  [    8/   25]
+loss: 0.000077  [    9/   25]
+loss: 0.000018  [   10/   25]
+loss: 0.000142  [   11/   25]
+loss: 0.000219  [   12/   25]
+loss: 0.000024  [   13/   25]
+loss: 0.000086  [   14/   25]
+loss: 0.000106  [   15/   25]
+loss: 0.000038  [   16/   25]
+loss: 0.000125  [   17/   25]
+loss: 0.000033  [   18/   25]
+loss: 0.000029  [   19/   25]
+loss: 0.000031  [   20/   25]
+loss: 0.000075  [   21/   25]
+loss: 0.000010  [   22/   25]
+loss: 0.000037  [   23/   25]
+loss: 0.000034  [   24/   25]
+average one epoch loss: 0.000084
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.539216 
+
+Epoch 57
+-------------------------------
+loss: 0.000034  [    0/   25]
+loss: 0.000164  [    1/   25]
+loss: 0.001423  [    2/   25]
+loss: 0.000079  [    3/   25]
+loss: 0.000019  [    4/   25]
+loss: 0.000572  [    5/   25]
+loss: 0.000058  [    6/   25]
+loss: 0.000051  [    7/   25]
+loss: 0.000009  [    8/   25]
+loss: 0.000056  [    9/   25]
+loss: 0.000149  [   10/   25]
+loss: 0.000055  [   11/   25]
+loss: 0.000029  [   12/   25]
+loss: 0.000029  [   13/   25]
+loss: 0.000369  [   14/   25]
+loss: 0.000286  [   15/   25]
+loss: 0.000016  [   16/   25]
+loss: 0.000042  [   17/   25]
+loss: 0.000073  [   18/   25]
+loss: 0.000031  [   19/   25]
+loss: 0.000024  [   20/   25]
+loss: 0.000064  [   21/   25]
+loss: 0.000140  [   22/   25]
+loss: 0.000011  [   23/   25]
+loss: 0.000012  [   24/   25]
+average one epoch loss: 0.000152
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.519834 
+
+Epoch 58
+-------------------------------
+loss: 0.000013  [    0/   25]
+loss: 0.000047  [    1/   25]
+loss: 0.000013  [    2/   25]
+loss: 0.000009  [    3/   25]
+loss: 0.000012  [    4/   25]
+loss: 0.000104  [    5/   25]
+loss: 0.000040  [    6/   25]
+loss: 0.000026  [    7/   25]
+loss: 0.000097  [    8/   25]
+loss: 0.000023  [    9/   25]
+loss: 0.000019  [   10/   25]
+loss: 0.000218  [   11/   25]
+loss: 0.000024  [   12/   25]
+loss: 0.000023  [   13/   25]
+loss: 0.000011  [   14/   25]
+loss: 0.000017  [   15/   25]
+loss: 0.000019  [   16/   25]
+loss: 0.000019  [   17/   25]
+loss: 0.000051  [   18/   25]
+loss: 0.000153  [   19/   25]
+loss: 0.000212  [   20/   25]
+loss: 0.000042  [   21/   25]
+loss: 0.000011  [   22/   25]
+loss: 0.000004  [   23/   25]
+loss: 0.000008  [   24/   25]
+average one epoch loss: 0.000049
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.525110 
+
+Epoch 59
+-------------------------------
+loss: 0.000088  [    0/   25]
+loss: 0.000136  [    1/   25]
+loss: 0.000197  [    2/   25]
+loss: 0.000049  [    3/   25]
+loss: 0.000040  [    4/   25]
+loss: 0.000271  [    5/   25]
+loss: 0.000007  [    6/   25]
+loss: 0.000134  [    7/   25]
+loss: 0.000012  [    8/   25]
+loss: 0.000014  [    9/   25]
+loss: 0.000010  [   10/   25]
+loss: 0.000019  [   11/   25]
+loss: 0.000016  [   12/   25]
+loss: 0.000045  [   13/   25]
+loss: 0.000014  [   14/   25]
+loss: 0.000012  [   15/   25]
+loss: 0.000007  [   16/   25]
+loss: 0.000046  [   17/   25]
+loss: 0.000014  [   18/   25]
+loss: 0.000010  [   19/   25]
+loss: 0.000013  [   20/   25]
+loss: 0.000137  [   21/   25]
+loss: 0.000009  [   22/   25]
+loss: 0.000017  [   23/   25]
+loss: 0.000014  [   24/   25]
+average one epoch loss: 0.000053
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.536423 
+
+Epoch 60
+-------------------------------
+loss: 0.000024  [    0/   25]
+loss: 0.000241  [    1/   25]
+loss: 0.000050  [    2/   25]
+loss: 0.000050  [    3/   25]
+loss: 0.000083  [    4/   25]
+loss: 0.000006  [    5/   25]
+loss: 0.000017  [    6/   25]
+loss: 0.000041  [    7/   25]
+loss: 0.000025  [    8/   25]
+loss: 0.000117  [    9/   25]
+loss: 0.000013  [   10/   25]
+loss: 0.000034  [   11/   25]
+loss: 0.000009  [   12/   25]
+loss: 0.000023  [   13/   25]
+loss: 0.000004  [   14/   25]
+loss: 0.000058  [   15/   25]
+loss: 0.000023  [   16/   25]
+loss: 0.000038  [   17/   25]
+loss: 0.000017  [   18/   25]
+loss: 0.000016  [   19/   25]
+loss: 0.000019  [   20/   25]
+loss: 0.000002  [   21/   25]
+loss: 0.000011  [   22/   25]
+loss: 0.000011  [   23/   25]
+loss: 0.000006  [   24/   25]
+average one epoch loss: 0.000038
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.522034 
+
+Epoch 61
+-------------------------------
+loss: 0.000031  [    0/   25]
+loss: 0.000006  [    1/   25]
+loss: 0.000018  [    2/   25]
+loss: 0.000013  [    3/   25]
+loss: 0.000015  [    4/   25]
+loss: 0.000020  [    5/   25]
+loss: 0.000013  [    6/   25]
+loss: 0.000036  [    7/   25]
+loss: 0.000073  [    8/   25]
+loss: 0.000012  [    9/   25]
+loss: 0.000009  [   10/   25]
+loss: 0.000010  [   11/   25]
+loss: 0.000022  [   12/   25]
+loss: 0.000016  [   13/   25]
+loss: 0.000018  [   14/   25]
+loss: 0.000003  [   15/   25]
+loss: 0.000053  [   16/   25]
+loss: 0.000052  [   17/   25]
+loss: 0.000069  [   18/   25]
+loss: 0.000006  [   19/   25]
+loss: 0.000004  [   20/   25]
+loss: 0.000010  [   21/   25]
+loss: 0.000050  [   22/   25]
+loss: 0.000052  [   23/   25]
+loss: 0.000034  [   24/   25]
+average one epoch loss: 0.000026
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.529839 
+
+Epoch 62
+-------------------------------
+loss: 0.000023  [    0/   25]
+loss: 0.000028  [    1/   25]
+loss: 0.000060  [    2/   25]
+loss: 0.000031  [    3/   25]
+loss: 0.000017  [    4/   25]
+loss: 0.000037  [    5/   25]
+loss: 0.000159  [    6/   25]
+loss: 0.310010  [    7/   25]
+loss: 0.000036  [    8/   25]
+loss: 0.022579  [    9/   25]
+loss: 0.000770  [   10/   25]
+loss: 0.000757  [   11/   25]
+loss: 0.000575  [   12/   25]
+loss: 0.216999  [   13/   25]
+loss: 0.000442  [   14/   25]
+loss: 0.001190  [   15/   25]
+loss: 0.000444  [   16/   25]
+loss: 0.104093  [   17/   25]
+loss: 0.034413  [   18/   25]
+loss: 0.016953  [   19/   25]
+loss: 0.000201  [   20/   25]
+loss: 0.009039  [   21/   25]
+loss: 0.014130  [   22/   25]
+loss: 0.003657  [   23/   25]
+loss: 0.076751  [   24/   25]
+average one epoch loss: 0.032536
+Test Error: 
+Accuracy: 72.5%, Avg loss: 1.144315 
+
+Epoch 63
+-------------------------------
+loss: 0.003035  [    0/   25]
+loss: 0.036047  [    1/   25]
+loss: 0.049045  [    2/   25]
+loss: 0.032445  [    3/   25]
+loss: 0.115591  [    4/   25]
+loss: 0.179822  [    5/   25]
+loss: 0.008415  [    6/   25]
+loss: 0.121260  [    7/   25]
+loss: 0.111060  [    8/   25]
+loss: 0.192419  [    9/   25]
+loss: 0.003512  [   10/   25]
+loss: 0.018922  [   11/   25]
+loss: 0.063742  [   12/   25]
+loss: 0.102829  [   13/   25]
+loss: 0.035325  [   14/   25]
+loss: 0.127950  [   15/   25]
+loss: 0.008902  [   16/   25]
+loss: 0.044723  [   17/   25]
+loss: 0.122463  [   18/   25]
+loss: 0.064514  [   19/   25]
+loss: 0.068576  [   20/   25]
+loss: 0.445123  [   21/   25]
+loss: 0.148285  [   22/   25]
+loss: 0.240449  [   23/   25]
+loss: 0.250262  [   24/   25]
+average one epoch loss: 0.103789
+Test Error: 
+Accuracy: 87.5%, Avg loss: 0.568657 
+
+Epoch 64
+-------------------------------
+loss: 0.017338  [    0/   25]
+loss: 0.011144  [    1/   25]
+loss: 0.021776  [    2/   25]
+loss: 0.009386  [    3/   25]
+loss: 0.025742  [    4/   25]
+loss: 0.082564  [    5/   25]
+loss: 0.083501  [    6/   25]
+loss: 0.036009  [    7/   25]
+loss: 0.148182  [    8/   25]
+loss: 0.140985  [    9/   25]
+loss: 0.218130  [   10/   25]
+loss: 0.209203  [   11/   25]
+loss: 0.147932  [   12/   25]
+loss: 0.019178  [   13/   25]
+loss: 0.035007  [   14/   25]
+loss: 0.105188  [   15/   25]
+loss: 0.035812  [   16/   25]
+loss: 0.068965  [   17/   25]
+loss: 0.253328  [   18/   25]
+loss: 0.082628  [   19/   25]
+loss: 0.014931  [   20/   25]
+loss: 0.014711  [   21/   25]
+loss: 0.047318  [   22/   25]
+loss: 0.038303  [   23/   25]
+loss: 0.003654  [   24/   25]
+average one epoch loss: 0.074836
+Test Error: 
+Accuracy: 89.0%, Avg loss: 0.412217 
+
+Epoch 65
+-------------------------------
+loss: 0.017647  [    0/   25]
+loss: 0.030573  [    1/   25]
+loss: 0.011183  [    2/   25]
+loss: 0.005277  [    3/   25]
+loss: 0.015387  [    4/   25]
+loss: 0.020500  [    5/   25]
+loss: 0.042396  [    6/   25]
+loss: 0.065321  [    7/   25]
+loss: 0.005714  [    8/   25]
+loss: 0.062085  [    9/   25]
+loss: 0.003719  [   10/   25]
+loss: 0.041547  [   11/   25]
+loss: 0.003823  [   12/   25]
+loss: 0.011585  [   13/   25]
+loss: 0.004454  [   14/   25]
+loss: 0.005574  [   15/   25]
+loss: 0.001349  [   16/   25]
+loss: 0.005538  [   17/   25]
+loss: 0.002957  [   18/   25]
+loss: 0.008787  [   19/   25]
+loss: 0.002448  [   20/   25]
+loss: 0.001542  [   21/   25]
+loss: 0.042593  [   22/   25]
+loss: 0.002451  [   23/   25]
+loss: 0.036867  [   24/   25]
+average one epoch loss: 0.018053
+Test Error: 
+Accuracy: 87.5%, Avg loss: 0.450879 
+
+Epoch 66
+-------------------------------
+loss: 0.009845  [    0/   25]
+loss: 0.003700  [    1/   25]
+loss: 0.001932  [    2/   25]
+loss: 0.008547  [    3/   25]
+loss: 0.002976  [    4/   25]
+loss: 0.001668  [    5/   25]
+loss: 0.000875  [    6/   25]
+loss: 0.000997  [    7/   25]
+loss: 0.007961  [    8/   25]
+loss: 0.007888  [    9/   25]
+loss: 0.005125  [   10/   25]
+loss: 0.001462  [   11/   25]
+loss: 0.012350  [   12/   25]
+loss: 0.001159  [   13/   25]
+loss: 0.001219  [   14/   25]
+loss: 0.004640  [   15/   25]
+loss: 0.001487  [   16/   25]
+loss: 0.004114  [   17/   25]
+loss: 0.002952  [   18/   25]
+loss: 0.000637  [   19/   25]
+loss: 0.003050  [   20/   25]
+loss: 0.001285  [   21/   25]
+loss: 0.021408  [   22/   25]
+loss: 0.000183  [   23/   25]
+loss: 0.000981  [   24/   25]
+average one epoch loss: 0.004338
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.315004 
+
+Epoch 67
+-------------------------------
+loss: 0.000228  [    0/   25]
+loss: 0.000329  [    1/   25]
+loss: 0.000160  [    2/   25]
+loss: 0.000302  [    3/   25]
+loss: 0.002385  [    4/   25]
+loss: 0.000809  [    5/   25]
+loss: 0.000608  [    6/   25]
+loss: 0.002338  [    7/   25]
+loss: 0.001373  [    8/   25]
+loss: 0.000533  [    9/   25]
+loss: 0.000753  [   10/   25]
+loss: 0.000446  [   11/   25]
+loss: 0.000663  [   12/   25]
+loss: 0.000446  [   13/   25]
+loss: 0.004974  [   14/   25]
+loss: 0.000401  [   15/   25]
+loss: 0.000343  [   16/   25]
+loss: 0.000360  [   17/   25]
+loss: 0.001293  [   18/   25]
+loss: 0.002838  [   19/   25]
+loss: 0.002533  [   20/   25]
+loss: 0.000114  [   21/   25]
+loss: 0.000093  [   22/   25]
+loss: 0.000309  [   23/   25]
+loss: 0.000473  [   24/   25]
+average one epoch loss: 0.001004
+Test Error: 
+Accuracy: 92.0%, Avg loss: 0.306869 
+
+Epoch 68
+-------------------------------
+loss: 0.020387  [    0/   25]
+loss: 0.000441  [    1/   25]
+loss: 0.000549  [    2/   25]
+loss: 0.000342  [    3/   25]
+loss: 0.000576  [    4/   25]
+loss: 0.000390  [    5/   25]
+loss: 0.001469  [    6/   25]
+loss: 0.000237  [    7/   25]
+loss: 0.002099  [    8/   25]
+loss: 0.002695  [    9/   25]
+loss: 0.000181  [   10/   25]
+loss: 0.001366  [   11/   25]
+loss: 0.001124  [   12/   25]
+loss: 0.000304  [   13/   25]
+loss: 0.000514  [   14/   25]
+loss: 0.000359  [   15/   25]
+loss: 0.000047  [   16/   25]
+loss: 0.000459  [   17/   25]
+loss: 0.000859  [   18/   25]
+loss: 0.000736  [   19/   25]
+loss: 0.000169  [   20/   25]
+loss: 0.000291  [   21/   25]
+loss: 0.001467  [   22/   25]
+loss: 0.000358  [   23/   25]
+loss: 0.000307  [   24/   25]
+average one epoch loss: 0.001509
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.422021 
+
+Epoch 69
+-------------------------------
+loss: 0.000428  [    0/   25]
+loss: 0.001197  [    1/   25]
+loss: 0.000932  [    2/   25]
+loss: 0.000142  [    3/   25]
+loss: 0.005625  [    4/   25]
+loss: 0.001736  [    5/   25]
+loss: 0.000201  [    6/   25]
+loss: 0.000157  [    7/   25]
+loss: 0.001364  [    8/   25]
+loss: 0.002981  [    9/   25]
+loss: 0.000181  [   10/   25]
+loss: 0.000147  [   11/   25]
+loss: 0.000143  [   12/   25]
+loss: 0.000249  [   13/   25]
+loss: 0.001295  [   14/   25]
+loss: 0.000085  [   15/   25]
+loss: 0.000053  [   16/   25]
+loss: 0.000530  [   17/   25]
+loss: 0.001058  [   18/   25]
+loss: 0.000064  [   19/   25]
+loss: 0.000339  [   20/   25]
+loss: 0.000303  [   21/   25]
+loss: 0.000271  [   22/   25]
+loss: 0.000306  [   23/   25]
+loss: 0.000377  [   24/   25]
+average one epoch loss: 0.000807
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.384196 
+
+Epoch 70
+-------------------------------
+loss: 0.000457  [    0/   25]
+loss: 0.000195  [    1/   25]
+loss: 0.000077  [    2/   25]
+loss: 0.000064  [    3/   25]
+loss: 0.000063  [    4/   25]
+loss: 0.000113  [    5/   25]
+loss: 0.000373  [    6/   25]
+loss: 0.000177  [    7/   25]
+loss: 0.000012  [    8/   25]
+loss: 0.001894  [    9/   25]
+loss: 0.000067  [   10/   25]
+loss: 0.000115  [   11/   25]
+loss: 0.000068  [   12/   25]
+loss: 0.000039  [   13/   25]
+loss: 0.000050  [   14/   25]
+loss: 0.000087  [   15/   25]
+loss: 0.000155  [   16/   25]
+loss: 0.000095  [   17/   25]
+loss: 0.000328  [   18/   25]
+loss: 0.000063  [   19/   25]
+loss: 0.000053  [   20/   25]
+loss: 0.000037  [   21/   25]
+loss: 0.000087  [   22/   25]
+loss: 0.000188  [   23/   25]
+loss: 0.007724  [   24/   25]
+average one epoch loss: 0.000503
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.394537 
+
+Epoch 71
+-------------------------------
+loss: 0.000115  [    0/   25]
+loss: 0.000236  [    1/   25]
+loss: 0.000196  [    2/   25]
+loss: 0.000025  [    3/   25]
+loss: 0.000058  [    4/   25]
+loss: 0.000229  [    5/   25]
+loss: 0.000161  [    6/   25]
+loss: 0.000362  [    7/   25]
+loss: 0.000364  [    8/   25]
+loss: 0.000037  [    9/   25]
+loss: 0.000336  [   10/   25]
+loss: 0.000024  [   11/   25]
+loss: 0.000021  [   12/   25]
+loss: 0.000106  [   13/   25]
+loss: 0.000032  [   14/   25]
+loss: 0.000223  [   15/   25]
+loss: 0.000055  [   16/   25]
+loss: 0.000031  [   17/   25]
+loss: 0.000098  [   18/   25]
+loss: 0.000077  [   19/   25]
+loss: 0.000050  [   20/   25]
+loss: 0.000055  [   21/   25]
+loss: 0.000359  [   22/   25]
+loss: 0.000030  [   23/   25]
+loss: 0.000183  [   24/   25]
+average one epoch loss: 0.000139
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.386258 
+
+Epoch 72
+-------------------------------
+loss: 0.000034  [    0/   25]
+loss: 0.000076  [    1/   25]
+loss: 0.000449  [    2/   25]
+loss: 0.000080  [    3/   25]
+loss: 0.000046  [    4/   25]
+loss: 0.000044  [    5/   25]
+loss: 0.000274  [    6/   25]
+loss: 0.000199  [    7/   25]
+loss: 0.000007  [    8/   25]
+loss: 0.000053  [    9/   25]
+loss: 0.000096  [   10/   25]
+loss: 0.000570  [   11/   25]
+loss: 0.000213  [   12/   25]
+loss: 0.000041  [   13/   25]
+loss: 0.000242  [   14/   25]
+loss: 0.000078  [   15/   25]
+loss: 0.000145  [   16/   25]
+loss: 0.000414  [   17/   25]
+loss: 0.000175  [   18/   25]
+loss: 0.000939  [   19/   25]
+loss: 0.000091  [   20/   25]
+loss: 0.000045  [   21/   25]
+loss: 0.000016  [   22/   25]
+loss: 0.000057  [   23/   25]
+loss: 0.000074  [   24/   25]
+average one epoch loss: 0.000178
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.386692 
+
+Epoch 73
+-------------------------------
+loss: 0.000128  [    0/   25]
+loss: 0.001165  [    1/   25]
+loss: 0.000075  [    2/   25]
+loss: 0.000109  [    3/   25]
+loss: 0.000182  [    4/   25]
+loss: 0.000011  [    5/   25]
+loss: 0.000052  [    6/   25]
+loss: 0.000117  [    7/   25]
+loss: 0.000040  [    8/   25]
+loss: 0.000037  [    9/   25]
+loss: 0.000344  [   10/   25]
+loss: 0.000021  [   11/   25]
+loss: 0.000169  [   12/   25]
+loss: 0.000045  [   13/   25]
+loss: 0.000104  [   14/   25]
+loss: 0.000026  [   15/   25]
+loss: 0.000055  [   16/   25]
+loss: 0.000257  [   17/   25]
+loss: 0.000056  [   18/   25]
+loss: 0.000044  [   19/   25]
+loss: 0.000031  [   20/   25]
+loss: 0.000203  [   21/   25]
+loss: 0.001490  [   22/   25]
+loss: 0.000031  [   23/   25]
+loss: 0.000025  [   24/   25]
+average one epoch loss: 0.000193
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.404161 
+
+Epoch 74
+-------------------------------
+loss: 0.000081  [    0/   25]
+loss: 0.000091  [    1/   25]
+loss: 0.000103  [    2/   25]
+loss: 0.000254  [    3/   25]
+loss: 0.000029  [    4/   25]
+loss: 0.000024  [    5/   25]
+loss: 0.000030  [    6/   25]
+loss: 0.000046  [    7/   25]
+loss: 0.000025  [    8/   25]
+loss: 0.000020  [    9/   25]
+loss: 0.000006  [   10/   25]
+loss: 0.000093  [   11/   25]
+loss: 0.000017  [   12/   25]
+loss: 0.000016  [   13/   25]
+loss: 0.000101  [   14/   25]
+loss: 0.000019  [   15/   25]
+loss: 0.000189  [   16/   25]
+loss: 0.000317  [   17/   25]
+loss: 0.000038  [   18/   25]
+loss: 0.000668  [   19/   25]
+loss: 0.000039  [   20/   25]
+loss: 0.000032  [   21/   25]
+loss: 0.000143  [   22/   25]
+loss: 0.000051  [   23/   25]
+loss: 0.000016  [   24/   25]
+average one epoch loss: 0.000098
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.396580 
+
+Epoch 75
+-------------------------------
+loss: 0.000049  [    0/   25]
+loss: 0.000027  [    1/   25]
+loss: 0.000068  [    2/   25]
+loss: 0.000020  [    3/   25]
+loss: 0.000053  [    4/   25]
+loss: 0.000056  [    5/   25]
+loss: 0.000058  [    6/   25]
+loss: 0.000037  [    7/   25]
+loss: 0.000163  [    8/   25]
+loss: 0.000184  [    9/   25]
+loss: 0.000022  [   10/   25]
+loss: 0.000016  [   11/   25]
+loss: 0.000024  [   12/   25]
+loss: 0.000101  [   13/   25]
+loss: 0.000018  [   14/   25]
+loss: 0.000025  [   15/   25]
+loss: 0.000019  [   16/   25]
+loss: 0.000108  [   17/   25]
+loss: 0.000178  [   18/   25]
+loss: 0.000221  [   19/   25]
+loss: 0.000011  [   20/   25]
+loss: 0.000298  [   21/   25]
+loss: 0.000080  [   22/   25]
+loss: 0.000082  [   23/   25]
+loss: 0.000017  [   24/   25]
+average one epoch loss: 0.000077
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.418962 
+
+Epoch 76
+-------------------------------
+loss: 0.000018  [    0/   25]
+loss: 0.000092  [    1/   25]
+loss: 0.000035  [    2/   25]
+loss: 0.000007  [    3/   25]
+loss: 0.000026  [    4/   25]
+loss: 0.000259  [    5/   25]
+loss: 0.000035  [    6/   25]
+loss: 0.000041  [    7/   25]
+loss: 0.000290  [    8/   25]
+loss: 0.000123  [    9/   25]
+loss: 0.000045  [   10/   25]
+loss: 0.000043  [   11/   25]
+loss: 0.000086  [   12/   25]
+loss: 0.000243  [   13/   25]
+loss: 0.000024  [   14/   25]
+loss: 0.000060  [   15/   25]
+loss: 0.000031  [   16/   25]
+loss: 0.000027  [   17/   25]
+loss: 0.000190  [   18/   25]
+loss: 0.000039  [   19/   25]
+loss: 0.000043  [   20/   25]
+loss: 0.000092  [   21/   25]
+loss: 0.000296  [   22/   25]
+loss: 0.000283  [   23/   25]
+loss: 0.000021  [   24/   25]
+average one epoch loss: 0.000098
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.397916 
+
+Epoch 77
+-------------------------------
+loss: 0.000104  [    0/   25]
+loss: 0.000035  [    1/   25]
+loss: 0.000028  [    2/   25]
+loss: 0.000037  [    3/   25]
+loss: 0.000046  [    4/   25]
+loss: 0.000023  [    5/   25]
+loss: 0.000007  [    6/   25]
+loss: 0.000039  [    7/   25]
+loss: 0.000006  [    8/   25]
+loss: 0.000018  [    9/   25]
+loss: 0.000032  [   10/   25]
+loss: 0.000092  [   11/   25]
+loss: 0.000066  [   12/   25]
+loss: 0.000010  [   13/   25]
+loss: 0.000023  [   14/   25]
+loss: 0.000024  [   15/   25]
+loss: 0.000034  [   16/   25]
+loss: 0.000078  [   17/   25]
+loss: 0.000009  [   18/   25]
+loss: 0.000023  [   19/   25]
+loss: 0.000170  [   20/   25]
+loss: 0.000035  [   21/   25]
+loss: 0.000003  [   22/   25]
+loss: 0.000026  [   23/   25]
+loss: 0.000018  [   24/   25]
+average one epoch loss: 0.000039
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.427551 
+
+Epoch 78
+-------------------------------
+loss: 0.000052  [    0/   25]
+loss: 0.000234  [    1/   25]
+loss: 0.000007  [    2/   25]
+loss: 0.000017  [    3/   25]
+loss: 0.000019  [    4/   25]
+loss: 0.000151  [    5/   25]
+loss: 0.000048  [    6/   25]
+loss: 0.000113  [    7/   25]
+loss: 0.000030  [    8/   25]
+loss: 0.000033  [    9/   25]
+loss: 0.000167  [   10/   25]
+loss: 0.000027  [   11/   25]
+loss: 0.000009  [   12/   25]
+loss: 0.000025  [   13/   25]
+loss: 0.000024  [   14/   25]
+loss: 0.000007  [   15/   25]
+loss: 0.000046  [   16/   25]
+loss: 0.000049  [   17/   25]
+loss: 0.000002  [   18/   25]
+loss: 0.000065  [   19/   25]
+loss: 0.000021  [   20/   25]
+loss: 0.000018  [   21/   25]
+loss: 0.000055  [   22/   25]
+loss: 0.000011  [   23/   25]
+loss: 0.000009  [   24/   25]
+average one epoch loss: 0.000050
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.429286 
+
+Epoch 79
+-------------------------------
+loss: 0.000008  [    0/   25]
+loss: 0.000013  [    1/   25]
+loss: 0.000011  [    2/   25]
+loss: 0.000012  [    3/   25]
+loss: 0.000014  [    4/   25]
+loss: 0.000024  [    5/   25]
+loss: 0.000046  [    6/   25]
+loss: 0.000012  [    7/   25]
+loss: 0.000060  [    8/   25]
+loss: 0.000009  [    9/   25]
+loss: 0.000020  [   10/   25]
+loss: 0.000004  [   11/   25]
+loss: 0.000010  [   12/   25]
+loss: 0.000172  [   13/   25]
+loss: 0.000018  [   14/   25]
+loss: 0.000006  [   15/   25]
+loss: 0.000063  [   16/   25]
+loss: 0.000160  [   17/   25]
+loss: 0.000020  [   18/   25]
+loss: 0.000013  [   19/   25]
+loss: 0.000020  [   20/   25]
+loss: 0.000039  [   21/   25]
+loss: 0.000030  [   22/   25]
+loss: 0.000056  [   23/   25]
+loss: 0.000006  [   24/   25]
+average one epoch loss: 0.000034
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.430795 
+
+Epoch 80
+-------------------------------
+loss: 0.000040  [    0/   25]
+loss: 0.000007  [    1/   25]
+loss: 0.000014  [    2/   25]
+loss: 0.000145  [    3/   25]
+loss: 0.000014  [    4/   25]
+loss: 0.000066  [    5/   25]
+loss: 0.000014  [    6/   25]
+loss: 0.000020  [    7/   25]
+loss: 0.000008  [    8/   25]
+loss: 0.000006  [    9/   25]
+loss: 0.000018  [   10/   25]
+loss: 0.000072  [   11/   25]
+loss: 0.000007  [   12/   25]
+loss: 0.000007  [   13/   25]
+loss: 0.000048  [   14/   25]
+loss: 0.000007  [   15/   25]
+loss: 0.000012  [   16/   25]
+loss: 0.000012  [   17/   25]
+loss: 0.000244  [   18/   25]
+loss: 0.000050  [   19/   25]
+loss: 0.000008  [   20/   25]
+loss: 0.000021  [   21/   25]
+loss: 0.000017  [   22/   25]
+loss: 0.000006  [   23/   25]
+loss: 0.000021  [   24/   25]
+average one epoch loss: 0.000035
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.433653 
+
+Epoch 81
+-------------------------------
+loss: 0.000005  [    0/   25]
+loss: 0.000019  [    1/   25]
+loss: 0.000101  [    2/   25]
+loss: 0.000058  [    3/   25]
+loss: 0.000005  [    4/   25]
+loss: 0.000060  [    5/   25]
+loss: 0.000010  [    6/   25]
+loss: 0.000016  [    7/   25]
+loss: 0.000030  [    8/   25]
+loss: 0.000015  [    9/   25]
+loss: 0.000019  [   10/   25]
+loss: 0.000012  [   11/   25]
+loss: 0.000004  [   12/   25]
+loss: 0.000054  [   13/   25]
+loss: 0.000117  [   14/   25]
+loss: 0.000026  [   15/   25]
+loss: 0.000008  [   16/   25]
+loss: 0.000021  [   17/   25]
+loss: 0.000070  [   18/   25]
+loss: 0.000018  [   19/   25]
+loss: 0.000008  [   20/   25]
+loss: 0.000003  [   21/   25]
+loss: 0.000028  [   22/   25]
+loss: 0.000032  [   23/   25]
+loss: 0.000047  [   24/   25]
+average one epoch loss: 0.000032
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.440905 
+
+Epoch 82
+-------------------------------
+loss: 0.000036  [    0/   25]
+loss: 0.000010  [    1/   25]
+loss: 0.000010  [    2/   25]
+loss: 0.000012  [    3/   25]
+loss: 0.000019  [    4/   25]
+loss: 0.000033  [    5/   25]
+loss: 0.000031  [    6/   25]
+loss: 0.000011  [    7/   25]
+loss: 0.000038  [    8/   25]
+loss: 0.000009  [    9/   25]
+loss: 0.000005  [   10/   25]
+loss: 0.000006  [   11/   25]
+loss: 0.000015  [   12/   25]
+loss: 0.000026  [   13/   25]
+loss: 0.000053  [   14/   25]
+loss: 0.000024  [   15/   25]
+loss: 0.000011  [   16/   25]
+loss: 0.000006  [   17/   25]
+loss: 0.000005  [   18/   25]
+loss: 0.000013  [   19/   25]
+loss: 0.000003  [   20/   25]
+loss: 0.000012  [   21/   25]
+loss: 0.000144  [   22/   25]
+loss: 0.000032  [   23/   25]
+loss: 0.000011  [   24/   25]
+average one epoch loss: 0.000023
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.448704 
+
+Epoch 83
+-------------------------------
+loss: 0.000019  [    0/   25]
+loss: 0.000007  [    1/   25]
+loss: 0.000014  [    2/   25]
+loss: 0.000017  [    3/   25]
+loss: 0.000009  [    4/   25]
+loss: 0.000011  [    5/   25]
+loss: 0.000026  [    6/   25]
+loss: 0.000023  [    7/   25]
+loss: 0.000007  [    8/   25]
+loss: 0.001950  [    9/   25]
+loss: 0.000049  [   10/   25]
+loss: 0.000006  [   11/   25]
+loss: 0.000017  [   12/   25]
+loss: 0.000093  [   13/   25]
+loss: 0.000006  [   14/   25]
+loss: 0.000016  [   15/   25]
+loss: 0.000223  [   16/   25]
+loss: 0.000007  [   17/   25]
+loss: 0.000009  [   18/   25]
+loss: 0.000011  [   19/   25]
+loss: 0.000012  [   20/   25]
+loss: 0.000025  [   21/   25]
+loss: 0.000044  [   22/   25]
+loss: 0.000066  [   23/   25]
+loss: 0.000013  [   24/   25]
+average one epoch loss: 0.000107
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.452784 
+
+Epoch 84
+-------------------------------
+loss: 0.000034  [    0/   25]
+loss: 0.000096  [    1/   25]
+loss: 0.000016  [    2/   25]
+loss: 0.000003  [    3/   25]
+loss: 0.000008  [    4/   25]
+loss: 0.000015  [    5/   25]
+loss: 0.000067  [    6/   25]
+loss: 0.000052  [    7/   25]
+loss: 0.000319  [    8/   25]
+loss: 0.000014  [    9/   25]
+loss: 0.000043  [   10/   25]
+loss: 0.000002  [   11/   25]
+loss: 0.000011  [   12/   25]
+loss: 0.000006  [   13/   25]
+loss: 0.000132  [   14/   25]
+loss: 0.000059  [   15/   25]
+loss: 0.000242  [   16/   25]
+loss: 0.000006  [   17/   25]
+loss: 0.000005  [   18/   25]
+loss: 0.000016  [   19/   25]
+loss: 0.000006  [   20/   25]
+loss: 0.001215  [   21/   25]
+loss: 0.000010  [   22/   25]
+loss: 0.000008  [   23/   25]
+loss: 0.000019  [   24/   25]
+average one epoch loss: 0.000096
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.462960 
+
+Epoch 85
+-------------------------------
+loss: 0.000008  [    0/   25]
+loss: 0.000003  [    1/   25]
+loss: 0.000007  [    2/   25]
+loss: 0.000007  [    3/   25]
+loss: 0.000025  [    4/   25]
+loss: 0.000012  [    5/   25]
+loss: 0.000023  [    6/   25]
+loss: 0.000019  [    7/   25]
+loss: 0.000011  [    8/   25]
+loss: 0.000227  [    9/   25]
+loss: 0.000011  [   10/   25]
+loss: 0.000010  [   11/   25]
+loss: 0.000053  [   12/   25]
+loss: 0.000004  [   13/   25]
+loss: 0.000021  [   14/   25]
+loss: 0.000005  [   15/   25]
+loss: 0.000014  [   16/   25]
+loss: 0.000093  [   17/   25]
+loss: 0.000011  [   18/   25]
+loss: 0.000056  [   19/   25]
+loss: 0.000007  [   20/   25]
+loss: 0.000049  [   21/   25]
+loss: 0.000004  [   22/   25]
+loss: 0.000043  [   23/   25]
+loss: 0.000097  [   24/   25]
+average one epoch loss: 0.000033
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.524659 
+
+Epoch 86
+-------------------------------
+loss: 0.000013  [    0/   25]
+loss: 0.000005  [    1/   25]
+loss: 0.000008  [    2/   25]
+loss: 0.000013  [    3/   25]
+loss: 0.000011  [    4/   25]
+loss: 0.000020  [    5/   25]
+loss: 0.000018  [    6/   25]
+loss: 0.000009  [    7/   25]
+loss: 0.000001  [    8/   25]
+loss: 0.000033  [    9/   25]
+loss: 0.000009  [   10/   25]
+loss: 0.000007  [   11/   25]
+loss: 0.000008  [   12/   25]
+loss: 0.000007  [   13/   25]
+loss: 0.000013  [   14/   25]
+loss: 0.000005  [   15/   25]
+loss: 0.000003  [   16/   25]
+loss: 0.000004  [   17/   25]
+loss: 0.000024  [   18/   25]
+loss: 0.000019  [   19/   25]
+loss: 0.000001  [   20/   25]
+loss: 0.000004  [   21/   25]
+loss: 0.000054  [   22/   25]
+loss: 0.000009  [   23/   25]
+loss: 0.000004  [   24/   25]
+average one epoch loss: 0.000012
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.527640 
+
+Epoch 87
+-------------------------------
+loss: 0.000019  [    0/   25]
+loss: 0.000003  [    1/   25]
+loss: 0.000005  [    2/   25]
+loss: 0.000005  [    3/   25]
+loss: 0.000020  [    4/   25]
+loss: 0.000003  [    5/   25]
+loss: 0.000007  [    6/   25]
+loss: 0.000013  [    7/   25]
+loss: 0.000090  [    8/   25]
+loss: 0.000041  [    9/   25]
+loss: 0.000004  [   10/   25]
+loss: 0.000019  [   11/   25]
+loss: 0.000027  [   12/   25]
+loss: 0.000004  [   13/   25]
+loss: 0.000056  [   14/   25]
+loss: 0.000016  [   15/   25]
+loss: 0.000577  [   16/   25]
+loss: 0.000016  [   17/   25]
+loss: 0.000003  [   18/   25]
+loss: 0.000046  [   19/   25]
+loss: 0.000002  [   20/   25]
+loss: 0.000055  [   21/   25]
+loss: 0.000028  [   22/   25]
+loss: 0.000003  [   23/   25]
+loss: 0.000005  [   24/   25]
+average one epoch loss: 0.000043
+Test Error: 
+Accuracy: 90.0%, Avg loss: 0.733068 
+
+Epoch 88
+-------------------------------
+loss: 0.000002  [    0/   25]
+loss: 0.000010  [    1/   25]
+loss: 0.000056  [    2/   25]
+loss: 0.000882  [    3/   25]
+loss: 0.000006  [    4/   25]
+loss: 0.000009  [    5/   25]
+loss: 0.000002  [    6/   25]
+loss: 0.000003  [    7/   25]
+loss: 0.000014  [    8/   25]
+loss: 0.000017  [    9/   25]
+loss: 0.000011  [   10/   25]
+loss: 0.000014  [   11/   25]
+loss: 0.000027  [   12/   25]
+loss: 0.000008  [   13/   25]
+loss: 0.000005  [   14/   25]
+loss: 0.000016  [   15/   25]
+loss: 0.000004  [   16/   25]
+loss: 0.000015  [   17/   25]
+loss: 0.000239  [   18/   25]
+loss: 0.000022  [   19/   25]
+loss: 0.000015  [   20/   25]
+loss: 0.000006  [   21/   25]
+loss: 0.000023  [   22/   25]
+loss: 0.000126  [   23/   25]
+loss: 0.000002  [   24/   25]
+average one epoch loss: 0.000061
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.553151 
+
+Epoch 89
+-------------------------------
+loss: 0.002424  [    0/   25]
+loss: 0.000009  [    1/   25]
+loss: 0.000004  [    2/   25]
+loss: 0.000004  [    3/   25]
+loss: 0.021574  [    4/   25]
+loss: 0.000494  [    5/   25]
+loss: 0.000017  [    6/   25]
+loss: 0.000229  [    7/   25]
+loss: 0.119725  [    8/   25]
+loss: 0.015610  [    9/   25]
+loss: 0.157938  [   10/   25]
+loss: 0.185975  [   11/   25]
+loss: 0.117152  [   12/   25]
+loss: 0.189449  [   13/   25]
+loss: 0.125646  [   14/   25]
+loss: 0.154941  [   15/   25]
+loss: 0.213340  [   16/   25]
+loss: 0.078589  [   17/   25]
+loss: 0.054960  [   18/   25]
+loss: 0.172834  [   19/   25]
+loss: 0.023119  [   20/   25]
+loss: 0.004249  [   21/   25]
+loss: 0.111889  [   22/   25]
+loss: 0.063523  [   23/   25]
+loss: 0.061786  [   24/   25]
+average one epoch loss: 0.075019
+Test Error: 
+Accuracy: 65.5%, Avg loss: 1.914141 
+
+Epoch 90
+-------------------------------
+loss: 0.009574  [    0/   25]
+loss: 0.187658  [    1/   25]
+loss: 0.267952  [    2/   25]
+loss: 0.063394  [    3/   25]
+loss: 0.039557  [    4/   25]
+loss: 0.074271  [    5/   25]
+loss: 0.234621  [    6/   25]
+loss: 0.946930  [    7/   25]
+loss: 0.231094  [    8/   25]
+loss: 0.062114  [    9/   25]
+loss: 0.526382  [   10/   25]
+loss: 0.037566  [   11/   25]
+loss: 0.479629  [   12/   25]
+loss: 0.144436  [   13/   25]
+loss: 0.042484  [   14/   25]
+loss: 0.042161  [   15/   25]
+loss: 0.203968  [   16/   25]
+loss: 0.007000  [   17/   25]
+loss: 0.115640  [   18/   25]
+loss: 0.157196  [   19/   25]
+loss: 0.029344  [   20/   25]
+loss: 0.265134  [   21/   25]
+loss: 0.010387  [   22/   25]
+loss: 0.007164  [   23/   25]
+loss: 0.011367  [   24/   25]
+average one epoch loss: 0.167881
+Test Error: 
+Accuracy: 85.5%, Avg loss: 0.464845 
+
+Epoch 91
+-------------------------------
+loss: 0.025539  [    0/   25]
+loss: 0.122882  [    1/   25]
+loss: 0.006821  [    2/   25]
+loss: 0.106762  [    3/   25]
+loss: 0.020286  [    4/   25]
+loss: 0.045164  [    5/   25]
+loss: 0.195388  [    6/   25]
+loss: 0.017510  [    7/   25]
+loss: 0.102996  [    8/   25]
+loss: 0.009400  [    9/   25]
+loss: 0.007913  [   10/   25]
+loss: 0.007517  [   11/   25]
+loss: 0.013331  [   12/   25]
+loss: 0.145696  [   13/   25]
+loss: 0.022879  [   14/   25]
+loss: 0.003844  [   15/   25]
+loss: 0.151094  [   16/   25]
+loss: 0.035657  [   17/   25]
+loss: 0.026221  [   18/   25]
+loss: 0.027552  [   19/   25]
+loss: 0.001833  [   20/   25]
+loss: 0.001419  [   21/   25]
+loss: 0.075565  [   22/   25]
+loss: 0.017332  [   23/   25]
+loss: 0.082440  [   24/   25]
+average one epoch loss: 0.050922
+Test Error: 
+Accuracy: 85.0%, Avg loss: 0.546168 
+
+Epoch 92
+-------------------------------
+loss: 0.004376  [    0/   25]
+loss: 0.005833  [    1/   25]
+loss: 0.002661  [    2/   25]
+loss: 0.004416  [    3/   25]
+loss: 0.007554  [    4/   25]
+loss: 0.150309  [    5/   25]
+loss: 0.001919  [    6/   25]
+loss: 0.008644  [    7/   25]
+loss: 0.002982  [    8/   25]
+loss: 0.001100  [    9/   25]
+loss: 0.001472  [   10/   25]
+loss: 0.004867  [   11/   25]
+loss: 0.002254  [   12/   25]
+loss: 0.441356  [   13/   25]
+loss: 0.019576  [   14/   25]
+loss: 0.002531  [   15/   25]
+loss: 0.016054  [   16/   25]
+loss: 0.010099  [   17/   25]
+loss: 0.082442  [   18/   25]
+loss: 0.110669  [   19/   25]
+loss: 0.125124  [   20/   25]
+loss: 0.004861  [   21/   25]
+loss: 0.003435  [   22/   25]
+loss: 0.008485  [   23/   25]
+loss: 0.001285  [   24/   25]
+average one epoch loss: 0.040972
+Test Error: 
+Accuracy: 88.5%, Avg loss: 0.446106 
+
+Epoch 93
+-------------------------------
+loss: 0.002027  [    0/   25]
+loss: 0.032863  [    1/   25]
+loss: 0.007339  [    2/   25]
+loss: 0.000494  [    3/   25]
+loss: 0.001816  [    4/   25]
+loss: 0.001538  [    5/   25]
+loss: 0.002270  [    6/   25]
+loss: 0.001117  [    7/   25]
+loss: 0.009622  [    8/   25]
+loss: 0.002588  [    9/   25]
+loss: 0.002251  [   10/   25]
+loss: 0.003631  [   11/   25]
+loss: 0.000997  [   12/   25]
+loss: 0.004185  [   13/   25]
+loss: 0.006070  [   14/   25]
+loss: 0.005073  [   15/   25]
+loss: 0.004034  [   16/   25]
+loss: 0.001428  [   17/   25]
+loss: 0.005561  [   18/   25]
+loss: 0.009070  [   19/   25]
+loss: 0.001425  [   20/   25]
+loss: 0.002367  [   21/   25]
+loss: 0.002072  [   22/   25]
+loss: 0.031237  [   23/   25]
+loss: 0.009333  [   24/   25]
+average one epoch loss: 0.006016
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.418966 
+
+Epoch 94
+-------------------------------
+loss: 0.002043  [    0/   25]
+loss: 0.001195  [    1/   25]
+loss: 0.006019  [    2/   25]
+loss: 0.002929  [    3/   25]
+loss: 0.005382  [    4/   25]
+loss: 0.000140  [    5/   25]
+loss: 0.000157  [    6/   25]
+loss: 0.000178  [    7/   25]
+loss: 0.001685  [    8/   25]
+loss: 0.000131  [    9/   25]
+loss: 0.000497  [   10/   25]
+loss: 0.001745  [   11/   25]
+loss: 0.000881  [   12/   25]
+loss: 0.000065  [   13/   25]
+loss: 0.000807  [   14/   25]
+loss: 0.013804  [   15/   25]
+loss: 0.015970  [   16/   25]
+loss: 0.000752  [   17/   25]
+loss: 0.001976  [   18/   25]
+loss: 0.001393  [   19/   25]
+loss: 0.000162  [   20/   25]
+loss: 0.001577  [   21/   25]
+loss: 0.000364  [   22/   25]
+loss: 0.001942  [   23/   25]
+loss: 0.000459  [   24/   25]
+average one epoch loss: 0.002490
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.393848 
+
+Epoch 95
+-------------------------------
+loss: 0.001821  [    0/   25]
+loss: 0.000654  [    1/   25]
+loss: 0.004272  [    2/   25]
+loss: 0.001038  [    3/   25]
+loss: 0.000260  [    4/   25]
+loss: 0.000944  [    5/   25]
+loss: 0.000334  [    6/   25]
+loss: 0.000106  [    7/   25]
+loss: 0.000935  [    8/   25]
+loss: 0.000196  [    9/   25]
+loss: 0.000402  [   10/   25]
+loss: 0.000212  [   11/   25]
+loss: 0.000555  [   12/   25]
+loss: 0.000343  [   13/   25]
+loss: 0.001107  [   14/   25]
+loss: 0.000192  [   15/   25]
+loss: 0.000176  [   16/   25]
+loss: 0.000290  [   17/   25]
+loss: 0.000491  [   18/   25]
+loss: 0.000106  [   19/   25]
+loss: 0.000463  [   20/   25]
+loss: 0.002854  [   21/   25]
+loss: 0.000125  [   22/   25]
+loss: 0.003334  [   23/   25]
+loss: 0.000179  [   24/   25]
+average one epoch loss: 0.000856
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.409910 
+
+Epoch 96
+-------------------------------
+loss: 0.000035  [    0/   25]
+loss: 0.000078  [    1/   25]
+loss: 0.009148  [    2/   25]
+loss: 0.000171  [    3/   25]
+loss: 0.001249  [    4/   25]
+loss: 0.000370  [    5/   25]
+loss: 0.000462  [    6/   25]
+loss: 0.000535  [    7/   25]
+loss: 0.000042  [    8/   25]
+loss: 0.000332  [    9/   25]
+loss: 0.000241  [   10/   25]
+loss: 0.000640  [   11/   25]
+loss: 0.000600  [   12/   25]
+loss: 0.000125  [   13/   25]
+loss: 0.000060  [   14/   25]
+loss: 0.000938  [   15/   25]
+loss: 0.000150  [   16/   25]
+loss: 0.000323  [   17/   25]
+loss: 0.000356  [   18/   25]
+loss: 0.000719  [   19/   25]
+loss: 0.000178  [   20/   25]
+loss: 0.000153  [   21/   25]
+loss: 0.000731  [   22/   25]
+loss: 0.000316  [   23/   25]
+loss: 0.000157  [   24/   25]
+average one epoch loss: 0.000724
+Test Error: 
+Accuracy: 90.5%, Avg loss: 0.416840 
+
+Epoch 97
+-------------------------------
+loss: 0.001190  [    0/   25]
+loss: 0.000259  [    1/   25]
+loss: 0.000073  [    2/   25]
+loss: 0.000166  [    3/   25]
+loss: 0.000629  [    4/   25]
+loss: 0.000173  [    5/   25]
+loss: 0.000363  [    6/   25]
+loss: 0.000124  [    7/   25]
+loss: 0.000043  [    8/   25]
+loss: 0.000202  [    9/   25]
+loss: 0.000583  [   10/   25]
+loss: 0.000188  [   11/   25]
+loss: 0.000109  [   12/   25]
+loss: 0.000270  [   13/   25]
+loss: 0.000349  [   14/   25]
+loss: 0.000231  [   15/   25]
+loss: 0.000150  [   16/   25]
+loss: 0.001155  [   17/   25]
+loss: 0.000301  [   18/   25]
+loss: 0.000264  [   19/   25]
+loss: 0.000104  [   20/   25]
+loss: 0.000064  [   21/   25]
+loss: 0.000369  [   22/   25]
+loss: 0.000590  [   23/   25]
+loss: 0.000247  [   24/   25]
+average one epoch loss: 0.000328
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.427984 
+
+Epoch 98
+-------------------------------
+loss: 0.000168  [    0/   25]
+loss: 0.000966  [    1/   25]
+loss: 0.000286  [    2/   25]
+loss: 0.000311  [    3/   25]
+loss: 0.000356  [    4/   25]
+loss: 0.000061  [    5/   25]
+loss: 0.000071  [    6/   25]
+loss: 0.000047  [    7/   25]
+loss: 0.000738  [    8/   25]
+loss: 0.000036  [    9/   25]
+loss: 0.000107  [   10/   25]
+loss: 0.000149  [   11/   25]
+loss: 0.000165  [   12/   25]
+loss: 0.000156  [   13/   25]
+loss: 0.000042  [   14/   25]
+loss: 0.000216  [   15/   25]
+loss: 0.000081  [   16/   25]
+loss: 0.000520  [   17/   25]
+loss: 0.000238  [   18/   25]
+loss: 0.000092  [   19/   25]
+loss: 0.000415  [   20/   25]
+loss: 0.000018  [   21/   25]
+loss: 0.000136  [   22/   25]
+loss: 0.000045  [   23/   25]
+loss: 0.000093  [   24/   25]
+average one epoch loss: 0.000221
+Test Error: 
+Accuracy: 91.0%, Avg loss: 0.428845 
+
+Epoch 99
+-------------------------------
+loss: 0.000037  [    0/   25]
+loss: 0.000122  [    1/   25]
+loss: 0.000032  [    2/   25]
+loss: 0.000050  [    3/   25]
+loss: 0.000068  [    4/   25]
+loss: 0.000182  [    5/   25]
+loss: 0.003906  [    6/   25]
+loss: 0.000157  [    7/   25]
+loss: 0.000210  [    8/   25]
+loss: 0.000328  [    9/   25]
+loss: 0.000245  [   10/   25]
+loss: 0.000055  [   11/   25]
+loss: 0.000158  [   12/   25]
+loss: 0.000069  [   13/   25]
+loss: 0.000112  [   14/   25]
+loss: 0.000094  [   15/   25]
+loss: 0.002192  [   16/   25]
+loss: 0.000060  [   17/   25]
+loss: 0.000273  [   18/   25]
+loss: 0.000044  [   19/   25]
+loss: 0.000100  [   20/   25]
+loss: 0.000213  [   21/   25]
+loss: 0.001409  [   22/   25]
+loss: 0.000112  [   23/   25]
+loss: 0.000424  [   24/   25]
+average one epoch loss: 0.000426
+Test Error: 
+Accuracy: 91.5%, Avg loss: 0.430373 
+
+Epoch 100
+-------------------------------
+loss: 0.000118  [    0/   25]
+loss: 0.000028  [    1/   25]
+loss: 0.000037  [    2/   25]
+loss: 0.000065  [    3/   25]
+loss: 0.000447  [    4/   25]
+loss: 0.000058  [    5/   25]
+loss: 0.000076  [    6/   25]
+loss: 0.000213  [    7/   25]
+loss: 0.000034  [    8/   25]
+loss: 0.000045  [    9/   25]
+loss: 0.000052  [   10/   25]
+loss: 0.000820  [   11/   25]
+loss: 0.000069  [   12/   25]
+loss: 0.000267  [   13/   25]
+loss: 0.000042  [   14/   25]
+loss: 0.000129  [   15/   25]
+loss: 0.000066  [   16/   25]
+loss: 0.000065  [   17/   25]
+loss: 0.000652  [   18/   25]
+loss: 0.000020  [   19/   25]
+loss: 0.000068  [   20/   25]
+loss: 0.000047  [   21/   25]
+loss: 0.000160  [   22/   25]
+loss: 0.000034  [   23/   25]
+loss: 0.000488  [   24/   25]
+average one epoch loss: 0.000164
+Test Error: 
+Accuracy: 92.0%, Avg loss: 0.429937 
+
+Epoch 100, train_time -1727.3924283981323, test_time -184.85687375068665

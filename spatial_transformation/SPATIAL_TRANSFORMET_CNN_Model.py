@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 # PyTorch
+import uuid
 import sys
 import os
 import torch 
@@ -33,14 +34,14 @@ if torch.cuda.is_available():
     torch.cuda.manual_seed_all(myseed)
 os.makedirs('./models', exist_ok=True)
 save_path = './models/spatial_transformation_model.pth'
-
+isoutput = False
 # hyper parameter   
-batch_size = 200
-n_epochs = 200
+batch_size = 100
+n_epochs = 1
 lr = 0.001
 momentum = 0.9
 num_workers = 4
-input_image_width = 132
+input_image_width = 131
 output_dim = 4
 
 class CNNDataset(Dataset):
@@ -85,40 +86,43 @@ class CNNNetwork(nn.Module):
         #senventh 13 * 13 * 128
         self.conv7 = nn.Conv2d(128, 128, 3)
         self.conv8 = nn.Conv2d(128, 128, 3)
-        #nineth 9 * 9 * 143
+        #nineth 9 * 9 * 128
         #do maxpolling(2,2)
-        #tenth 5 * 5 * 143
+        #tenth 5 * 5 * 128
         self.fc1 = nn.Linear(5*5*128, 700)
-        self.fc2 = nn.Linear(700, 4)
         self.dropout = nn.Dropout(0.5)
+        self.fc2 = nn.Linear(700, 4)
 
 
-        # Spatial transformer localization-network
         self.localization = nn.Sequential(
             #3 * 132 * 132
-            nn.Conv2d(3, 8, kernel_size=7),
-            #8 * 126 * 126
+            nn.Conv2d(3, 15, kernel_size=3), nn.ReLU(True),
+            nn.Conv2d(15, 31, kernel_size=3), nn.ReLU(True),
+            #31 * 128 * 128
             nn.MaxPool2d(2, stride=2), nn.ReLU(True),
-            #8 * 63 * 63
-            nn.Conv2d(8, 10, kernel_size=5),
-            #10 * 59 * 59
+            #31 * 64 * 64
+            nn.Conv2d(31, 47, kernel_size=3), nn.ReLU(True),
+            nn.Conv2d(47, 59, kernel_size=3), nn.ReLU(True),
+            #59 * 60 * 60
             nn.MaxPool2d(2, stride=2, ceil_mode=True), nn.ReLU(True),
-            #10 * 30 * 30 默认向下取整数
-            nn.Conv2d(10, 12, kernel_size=5),
-            #12 * 26 * 26
+            #59 * 30 * 30 默认向下取整数
+            nn.Conv2d(59, 72, kernel_size=3), nn.ReLU(True),
+            nn.Conv2d(72, 86, kernel_size=3), nn.ReLU(True),
+            #83 * 26 * 26
             nn.MaxPool2d(2, stride=2, ceil_mode=True), nn.ReLU(True),
-            # 12 * 13 * 13
-            nn.Conv2d(12, 15, kernel_size=5),
-            # 15 * 9 * 9
+            # 83 * 13 * 13
+            nn.Conv2d(86, 99, kernel_size=3), nn.ReLU(True),
+            nn.Conv2d(99, 128, kernel_size=3), nn.ReLU(True),
+            # 102 * 9 * 9
             nn.MaxPool2d(2, stride=2, ceil_mode=True), nn.ReLU(True)
-            # 15 * 5 * 5
+            # 102 * 5 * 5
         )
 
         # Regressor for the 3 * 2 affine matrix
         self.fc_loc = nn.Sequential(
-            nn.Linear(15 * 5 * 5, 64),
+            nn.Linear(128 * 5 * 5, 500),
             nn.ReLU(True),
-            nn.Linear(64, 3 * 2)
+            nn.Linear(500, 3 * 2)
         )
         # Initialize the weights/bias with identity transformation
         self.fc_loc[2].weight.data.zero_()
@@ -127,7 +131,7 @@ class CNNNetwork(nn.Module):
     # Spatial transformer network forward function
     def stn(self, x):
         xs = self.localization(x)
-        xs = xs.view(-1, 15 * 5 * 5)
+        xs = xs.view(-1, 128 * 5 * 5)
         theta = self.fc_loc(xs)
         theta = theta.view(-1, 2, 3)
         grid = F.affine_grid(theta, x.size())
@@ -135,7 +139,20 @@ class CNNNetwork(nn.Module):
         return x
 
     def forward(self, x):
+        XX = str(uuid.uuid1())
+        if(isoutput):
+            unloader = transforms.ToPILImage()
+            image = x.cpu().clone()
+            image = image.squeeze(0)
+            image = unloader(image)
+            image.save('./example/'+XX + '1.jpg')
         x = self.stn(x)
+        if(isoutput):
+            unloader = transforms.ToPILImage()
+            image = x.cpu().clone()
+            image = image.squeeze(0)
+            image = unloader(image)
+            image.save('./example/'+XX + '2.jpg')
         x = F.relu(self.conv1(x))
         x = F.relu(self.conv2(x))
         x = F.max_pool2d(x, (2, 2))
@@ -207,6 +224,7 @@ if __name__ == '__main__':
     training_dataset = ImageFolder(train_path, transform=transform)
     test_dataset = ImageFolder(test_path, transform=transform)
     train_dataloader = DataLoader(training_dataset, batch_size=batch_size, shuffle=True)
+    train_dataloader11 = DataLoader(training_dataset, batch_size=1, shuffle=True)
     test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
     model = CNNNetwork()
     model.to(device)
@@ -222,3 +240,8 @@ if __name__ == '__main__':
         consuming_time_test += test(test_dataloader, model, loss_fn)
     print(f"Epoch {n_epochs}, train_time {consuming_time_train}, test_time {consuming_time_test}")
     torch.save(model.state_dict(), save_path)
+    for t in range(2):
+        isoutput = True
+        print(f"Epoch {t+1}\n-------------------------------")
+        train(train_dataloader11, model, loss_fn, optimizer)
+    print('finished')

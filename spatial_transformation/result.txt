@@ -12,7 +12,7 @@ CNNNetwork(
   (dropout): Dropout(p=0.5, inplace=False)
   (localization): Sequential(
     (0): Conv2d(3, 8, kernel_size=(7, 7), stride=(1, 1))
-    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=True)
     (2): ReLU(inplace=True)
     (3): Conv2d(8, 10, kernel_size=(5, 5), stride=(1, 1))
     (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=True)
